@@ -1,0 +1,60 @@
+package com.bananalab.snow.api;
+
+import com.bananalab.snow.api.model.BaseVO;
+import com.bananalab.snow.api.model.Fieldlist;
+import com.bananalab.snow.api.model.Fieldusers;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link FieldsApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public interface FieldsApiDelegate {
+
+    /**
+     * @see FieldsApi#addstar
+     */
+    ResponseEntity<BaseVO> addstar( String  token,
+         String  fieldId);
+
+    /**
+     * @see FieldsApi#cancelstar
+     */
+    ResponseEntity<BaseVO> cancelstar( String  token,
+         String  fieldId);
+
+    /**
+     * @see FieldsApi#fieldStar
+     */
+    ResponseEntity<Fieldlist> fieldStar( String  token,
+         Double  latitude,
+         Double  longitude,
+         String  region);
+
+    /**
+     * @see FieldsApi#fields
+     */
+    ResponseEntity<Fieldlist> fields( String  token,
+         String  region,
+         Double  latitude,
+         Double  longitude);
+
+    /**
+     * @see FieldsApi#fieldusers
+     */
+    ResponseEntity<Fieldusers> fieldusers( String  token,
+         Integer  fieldId);
+
+    /**
+     * @see FieldsApi#searchfield
+     */
+    ResponseEntity<Fieldlist> searchfield( String  fieldName);
+
+}

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="corecloudapi:war">
+    <output-path>$PROJECT_DIR$/corecloudapi/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>corecloudapi</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="corecloudapi-1.0.0.war">
+      <element id="artifact" artifact-name="corecloudapi:war exploded" />
+    </root>
+  </artifact>
+</component>

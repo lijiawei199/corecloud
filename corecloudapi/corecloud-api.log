@@ -1,0 +1,885 @@
+2020-04-17 13:04:13.444  INFO 6176 --- [main] c.bananalab.corecloud.ApplicationTests   : Starting ApplicationTests on DESKTOP-3F9LB6K with PID 6176 (started by intel in C:\workspace\corecloud\corecloudapi)
+2020-04-17 13:04:13.447  INFO 6176 --- [main] c.bananalab.corecloud.ApplicationTests   : The following profiles are active: dev
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'cleanerMapper' and 'com.bananalab.corecloud.mybatis.mapper.CleanerMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'equipMapper' and 'com.bananalab.corecloud.mybatis.mapper.EquipMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'guardMapper' and 'com.bananalab.corecloud.mybatis.mapper.GuardMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketFormatMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketFormatMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'picMapper' and 'com.bananalab.corecloud.mybatis.mapper.PicMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'potentialCustMapper' and 'com.bananalab.corecloud.mybatis.mapper.PotentialCustMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.066  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'subscriberMapper' and 'com.bananalab.corecloud.mybatis.mapper.SubscriberMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.067  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'tenantMapper' and 'com.bananalab.corecloud.mybatis.mapper.TenantMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:04:14.067  WARN 6176 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bananalab.corecloud.mybatis.mapper]' package. Please check your configuration.
+2020-04-17 13:04:14.188  INFO 6176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 13:04:14.190  INFO 6176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-17 13:04:14.237  INFO 6176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2020-04-17 13:04:14.589  INFO 6176 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6d8131e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-17 13:04:15.176  INFO 6176 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 13:04:17.317  INFO 6176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-17 13:04:17.333  INFO 6176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-17 13:04:17.340  INFO 6176 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-17 13:04:17.690  INFO 6176 --- [main] c.bananalab.corecloud.ApplicationTests   : Started ApplicationTests in 4.458 seconds (JVM running for 5.152)
+2020-04-17 13:04:18.054 DEBUG 6176 --- [main] c.b.c.m.mapper.StoreMapper.selectList    : ==>  Preparing: SELECT id,fid,market_num,name,tenant_id,total_area,usable_area,spec,status,pic_url,xpos,ypos,pic_id,type_id,pote_id,sub_id,expect_rent,floor,region,build_url,length,width,height,deadline FROM store select distinct time from store_data 
+2020-04-17 13:04:18.070 DEBUG 6176 --- [main] c.b.c.m.mapper.StoreMapper.selectList    : ==> Parameters: 
+2020-04-17 13:04:18.146  INFO 6176 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-04-17 13:07:50.875  INFO 12696 --- [main] c.bananalab.corecloud.ApplicationTests   : Starting ApplicationTests on DESKTOP-3F9LB6K with PID 12696 (started by intel in C:\workspace\corecloud\corecloudapi)
+2020-04-17 13:07:50.876  INFO 12696 --- [main] c.bananalab.corecloud.ApplicationTests   : The following profiles are active: dev
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'cleanerMapper' and 'com.bananalab.corecloud.mybatis.mapper.CleanerMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'equipMapper' and 'com.bananalab.corecloud.mybatis.mapper.EquipMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'guardMapper' and 'com.bananalab.corecloud.mybatis.mapper.GuardMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketFormatMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketFormatMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'picMapper' and 'com.bananalab.corecloud.mybatis.mapper.PicMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'potentialCustMapper' and 'com.bananalab.corecloud.mybatis.mapper.PotentialCustMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'subscriberMapper' and 'com.bananalab.corecloud.mybatis.mapper.SubscriberMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.473  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'tenantMapper' and 'com.bananalab.corecloud.mybatis.mapper.TenantMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:07:51.474  WARN 12696 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bananalab.corecloud.mybatis.mapper]' package. Please check your configuration.
+2020-04-17 13:07:51.605  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 13:07:51.607  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-17 13:07:51.654  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 repository interfaces.
+2020-04-17 13:07:51.978  INFO 12696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d5c899b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-17 13:07:52.771  INFO 12696 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 13:07:54.721  INFO 12696 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-17 13:07:54.735  INFO 12696 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-17 13:07:54.743  INFO 12696 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-17 13:07:55.135  INFO 12696 --- [main] c.bananalab.corecloud.ApplicationTests   : Started ApplicationTests in 4.491 seconds (JVM running for 5.086)
+2020-04-17 13:07:55.395 DEBUG 12696 --- [main] c.b.c.m.m.StoreDataMapper.distincttime   : ==>  Preparing: select distinct time from store_data 
+2020-04-17 13:07:55.411 DEBUG 12696 --- [main] c.b.c.m.m.StoreDataMapper.distincttime   : ==> Parameters: 
+2020-04-17 13:07:55.440 DEBUG 12696 --- [main] c.b.c.m.m.StoreDataMapper.distincttime   : <==      Total: 250
+2020-04-17 13:07:55.462  INFO 12696 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-04-17 13:15:52.737  INFO 5216 --- [main] c.bananalab.corecloud.ApplicationTests   : Starting ApplicationTests on DESKTOP-3F9LB6K with PID 5216 (started by intel in C:\workspace\corecloud\corecloudapi)
+2020-04-17 13:15:52.738  INFO 5216 --- [main] c.bananalab.corecloud.ApplicationTests   : The following profiles are active: dev
+2020-04-17 13:15:53.315  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'cleanerMapper' and 'com.bananalab.corecloud.mybatis.mapper.CleanerMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'equipMapper' and 'com.bananalab.corecloud.mybatis.mapper.EquipMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'guardMapper' and 'com.bananalab.corecloud.mybatis.mapper.GuardMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketFormatMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketFormatMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'picMapper' and 'com.bananalab.corecloud.mybatis.mapper.PicMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'potentialCustMapper' and 'com.bananalab.corecloud.mybatis.mapper.PotentialCustMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'subscriberMapper' and 'com.bananalab.corecloud.mybatis.mapper.SubscriberMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.316  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'tenantMapper' and 'com.bananalab.corecloud.mybatis.mapper.TenantMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:15:53.317  WARN 5216 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bananalab.corecloud.mybatis.mapper]' package. Please check your configuration.
+2020-04-17 13:15:53.446  INFO 5216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 13:15:53.448  INFO 5216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-17 13:15:53.497  INFO 5216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2020-04-17 13:15:53.807  INFO 5216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4f73da3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-17 13:15:55.633  INFO 5216 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 13:15:57.548  INFO 5216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-17 13:15:57.562  INFO 5216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-17 13:15:57.569  INFO 5216 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-17 13:15:57.911  INFO 5216 --- [main] c.bananalab.corecloud.ApplicationTests   : Started ApplicationTests in 5.384 seconds (JVM running for 5.997)
+2020-04-17 13:15:58.166 DEBUG 5216 --- [main] c.b.c.m.m.StoreDataMapper.distincttime   : ==>  Preparing: select distinct time from store_data 
+2020-04-17 13:15:58.184 DEBUG 5216 --- [main] c.b.c.m.m.StoreDataMapper.distincttime   : ==> Parameters: 
+2020-04-17 13:15:58.230 DEBUG 5216 --- [main] c.b.c.m.m.StoreDataMapper.distincttime   : <==      Total: 250
+2020-04-17 13:15:58.246 DEBUG 5216 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( time ) VALUES ( ? ) 
+2020-04-17 13:15:58.247 DEBUG 5216 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 2019-10-21 00:00:00.0(Timestamp)
+2020-04-17 13:15:58.290  INFO 5216 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-04-17 13:17:36.288  INFO 5464 --- [main] c.bananalab.corecloud.ApplicationTests   : Starting ApplicationTests on DESKTOP-3F9LB6K with PID 5464 (started by intel in C:\workspace\corecloud\corecloudapi)
+2020-04-17 13:17:36.289  INFO 5464 --- [main] c.bananalab.corecloud.ApplicationTests   : The following profiles are active: dev
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'cleanerMapper' and 'com.bananalab.corecloud.mybatis.mapper.CleanerMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'equipMapper' and 'com.bananalab.corecloud.mybatis.mapper.EquipMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'guardMapper' and 'com.bananalab.corecloud.mybatis.mapper.GuardMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketFormatMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketFormatMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'picMapper' and 'com.bananalab.corecloud.mybatis.mapper.PicMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'potentialCustMapper' and 'com.bananalab.corecloud.mybatis.mapper.PotentialCustMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'subscriberMapper' and 'com.bananalab.corecloud.mybatis.mapper.SubscriberMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.882  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'tenantMapper' and 'com.bananalab.corecloud.mybatis.mapper.TenantMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:17:36.883  WARN 5464 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bananalab.corecloud.mybatis.mapper]' package. Please check your configuration.
+2020-04-17 13:17:37.000  INFO 5464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 13:17:37.002  INFO 5464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-17 13:17:37.046  INFO 5464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2020-04-17 13:17:37.348  INFO 5464 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8c93af76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-17 13:17:37.861  INFO 5464 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 13:17:39.805  INFO 5464 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-17 13:17:39.818  INFO 5464 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-17 13:17:39.826  INFO 5464 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-17 13:17:40.244  INFO 5464 --- [main] c.bananalab.corecloud.ApplicationTests   : Started ApplicationTests in 4.153 seconds (JVM running for 4.782)
+2020-04-17 13:17:40.488 DEBUG 5464 --- [main] c.b.c.m.m.S.updatetimedate               : ==>  Preparing: SELECT sale,time,flow FROM `store_data` group by time ) 
+2020-04-17 13:17:40.505 DEBUG 5464 --- [main] c.b.c.m.m.S.updatetimedate               : ==> Parameters: 
+2020-04-17 13:17:40.567  INFO 5464 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-04-17 13:18:15.775  INFO 1196 --- [main] c.bananalab.corecloud.ApplicationTests   : Starting ApplicationTests on DESKTOP-3F9LB6K with PID 1196 (started by intel in C:\workspace\corecloud\corecloudapi)
+2020-04-17 13:18:15.776  INFO 1196 --- [main] c.bananalab.corecloud.ApplicationTests   : The following profiles are active: dev
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'cleanerMapper' and 'com.bananalab.corecloud.mybatis.mapper.CleanerMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'equipMapper' and 'com.bananalab.corecloud.mybatis.mapper.EquipMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'guardMapper' and 'com.bananalab.corecloud.mybatis.mapper.GuardMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'marketFormatMapper' and 'com.bananalab.corecloud.mybatis.mapper.MarketFormatMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'picMapper' and 'com.bananalab.corecloud.mybatis.mapper.PicMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'potentialCustMapper' and 'com.bananalab.corecloud.mybatis.mapper.PotentialCustMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeDataMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreDataMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'storeMapper' and 'com.bananalab.corecloud.mybatis.mapper.StoreMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'subscriberMapper' and 'com.bananalab.corecloud.mybatis.mapper.SubscriberMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.359  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'tenantMapper' and 'com.bananalab.corecloud.mybatis.mapper.TenantMapper' mapperInterface. Bean already defined with the same name!
+2020-04-17 13:18:16.360  WARN 1196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bananalab.corecloud.mybatis.mapper]' package. Please check your configuration.
+2020-04-17 13:18:16.477  INFO 1196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 13:18:16.479  INFO 1196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-17 13:18:16.525  INFO 1196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2020-04-17 13:18:16.828  INFO 1196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9d0d52f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-17 13:18:17.348  INFO 1196 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 13:18:19.262  INFO 1196 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-17 13:18:19.275  INFO 1196 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-17 13:18:19.283  INFO 1196 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-17 13:18:19.644  INFO 1196 --- [main] c.bananalab.corecloud.ApplicationTests   : Started ApplicationTests in 4.079 seconds (JVM running for 4.627)
+2020-04-17 13:18:19.887 DEBUG 1196 --- [main] c.b.c.m.m.S.updatetimedate               : ==>  Preparing: SELECT sale,time,flow FROM `store_data` group by time 
+2020-04-17 13:18:19.905 DEBUG 1196 --- [main] c.b.c.m.m.S.updatetimedate               : ==> Parameters: 
+2020-04-17 13:18:19.969 DEBUG 1196 --- [main] c.b.c.m.m.S.updatetimedate               : <==      Total: 250
+2020-04-17 13:18:19.984 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:19.986 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6064(BigDecimal), 2019-10-21 00:00:00.0(Timestamp), 620(Integer)
+2020-04-17 13:18:20.000 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.001 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.001 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6680(BigDecimal), 2019-10-22 00:00:00.0(Timestamp), 730(Integer)
+2020-04-17 13:18:20.014 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.015 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.016 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5505(BigDecimal), 2019-10-23 00:00:00.0(Timestamp), 410(Integer)
+2020-04-17 13:18:20.028 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.029 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.029 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8033(BigDecimal), 2019-10-24 00:00:00.0(Timestamp), 925(Integer)
+2020-04-17 13:18:20.042 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.043 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.043 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6417(BigDecimal), 2019-10-25 00:00:00.0(Timestamp), 810(Integer)
+2020-04-17 13:18:20.056 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.057 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.057 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4787(BigDecimal), 2019-10-26 00:00:00.0(Timestamp), 720(Integer)
+2020-04-17 13:18:20.069 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.070 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.070 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7796(BigDecimal), 2019-10-27 00:00:00.0(Timestamp), 975(Integer)
+2020-04-17 13:18:20.084 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.085 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.085 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6225(BigDecimal), 2019-10-28 00:00:00.0(Timestamp), 460(Integer)
+2020-04-17 13:18:20.098 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.099 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.099 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8766(BigDecimal), 2019-10-29 00:00:00.0(Timestamp), 830(Integer)
+2020-04-17 13:18:20.112 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.113 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.114 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8625(BigDecimal), 2019-10-30 00:00:00.0(Timestamp), 880(Integer)
+2020-04-17 13:18:20.127 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.127 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.128 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8333(BigDecimal), 2019-10-31 00:00:00.0(Timestamp), 825(Integer)
+2020-04-17 13:18:20.140 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.141 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.141 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6504(BigDecimal), 2019-11-01 00:00:00.0(Timestamp), 750(Integer)
+2020-04-17 13:18:20.154 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.155 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.155 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4851(BigDecimal), 2019-11-02 00:00:00.0(Timestamp), 390(Integer)
+2020-04-17 13:18:20.169 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.170 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.170 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5679(BigDecimal), 2019-11-03 00:00:00.0(Timestamp), 750(Integer)
+2020-04-17 13:18:20.183 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.184 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.185 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8857(BigDecimal), 2019-11-04 00:00:00.0(Timestamp), 570(Integer)
+2020-04-17 13:18:20.198 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.199 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.199 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4441(BigDecimal), 2019-11-05 00:00:00.0(Timestamp), 730(Integer)
+2020-04-17 13:18:20.213 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.214 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.214 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4361(BigDecimal), 2019-11-06 00:00:00.0(Timestamp), 870(Integer)
+2020-04-17 13:18:20.226 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.227 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.227 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4053(BigDecimal), 2019-11-07 00:00:00.0(Timestamp), 830(Integer)
+2020-04-17 13:18:20.240 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.241 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.241 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8878(BigDecimal), 2019-11-08 00:00:00.0(Timestamp), 990(Integer)
+2020-04-17 13:18:20.254 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.254 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.254 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6390(BigDecimal), 2019-11-09 00:00:00.0(Timestamp), 870(Integer)
+2020-04-17 13:18:20.267 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.267 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.267 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8186(BigDecimal), 2019-11-10 00:00:00.0(Timestamp), 805(Integer)
+2020-04-17 13:18:20.279 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.280 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.281 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7910(BigDecimal), 2019-11-11 00:00:00.0(Timestamp), 355(Integer)
+2020-04-17 13:18:20.293 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.294 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.294 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8966(BigDecimal), 2019-11-12 00:00:00.0(Timestamp), 680(Integer)
+2020-04-17 13:18:20.306 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.307 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.307 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8198(BigDecimal), 2019-11-13 00:00:00.0(Timestamp), 585(Integer)
+2020-04-17 13:18:20.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4678(BigDecimal), 2019-11-14 00:00:00.0(Timestamp), 350(Integer)
+2020-04-17 13:18:20.333 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.334 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.334 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4591(BigDecimal), 2019-11-15 00:00:00.0(Timestamp), 610(Integer)
+2020-04-17 13:18:20.347 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.347 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.348 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5853(BigDecimal), 2019-11-16 00:00:00.0(Timestamp), 405(Integer)
+2020-04-17 13:18:20.361 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.362 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.362 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4249(BigDecimal), 2019-11-17 00:00:00.0(Timestamp), 535(Integer)
+2020-04-17 13:18:20.374 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.374 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.375 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6215(BigDecimal), 2019-11-18 00:00:00.0(Timestamp), 630(Integer)
+2020-04-17 13:18:20.388 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.389 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.389 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5594(BigDecimal), 2019-11-19 00:00:00.0(Timestamp), 995(Integer)
+2020-04-17 13:18:20.401 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.401 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.401 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7558(BigDecimal), 2019-11-20 00:00:00.0(Timestamp), 775(Integer)
+2020-04-17 13:18:20.415 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.415 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.415 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4969(BigDecimal), 2019-11-21 00:00:00.0(Timestamp), 1015(Integer)
+2020-04-17 13:18:20.429 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.429 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.429 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4009(BigDecimal), 2019-11-22 00:00:00.0(Timestamp), 905(Integer)
+2020-04-17 13:18:20.443 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.443 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.443 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6483(BigDecimal), 2019-11-23 00:00:00.0(Timestamp), 605(Integer)
+2020-04-17 13:18:20.456 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.457 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.457 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4647(BigDecimal), 2019-11-24 00:00:00.0(Timestamp), 750(Integer)
+2020-04-17 13:18:20.470 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.470 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.471 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4246(BigDecimal), 2019-11-25 00:00:00.0(Timestamp), 960(Integer)
+2020-04-17 13:18:20.484 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.485 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.485 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4170(BigDecimal), 2019-11-26 00:00:00.0(Timestamp), 730(Integer)
+2020-04-17 13:18:20.498 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.499 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.499 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5282(BigDecimal), 2019-11-27 00:00:00.0(Timestamp), 685(Integer)
+2020-04-17 13:18:20.512 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.513 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.513 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8822(BigDecimal), 2019-11-28 00:00:00.0(Timestamp), 995(Integer)
+2020-04-17 13:18:20.526 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.527 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.527 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4464(BigDecimal), 2019-11-29 00:00:00.0(Timestamp), 880(Integer)
+2020-04-17 13:18:20.540 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.541 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.541 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6923(BigDecimal), 2019-11-30 00:00:00.0(Timestamp), 365(Integer)
+2020-04-17 13:18:20.553 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.554 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.554 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7584(BigDecimal), 2019-12-01 00:00:00.0(Timestamp), 345(Integer)
+2020-04-17 13:18:20.567 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.567 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.568 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5428(BigDecimal), 2019-12-02 00:00:00.0(Timestamp), 940(Integer)
+2020-04-17 13:18:20.582 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.582 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.582 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8907(BigDecimal), 2019-12-03 00:00:00.0(Timestamp), 955(Integer)
+2020-04-17 13:18:20.595 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.596 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.596 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5104(BigDecimal), 2019-12-04 00:00:00.0(Timestamp), 480(Integer)
+2020-04-17 13:18:20.610 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.610 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.610 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4964(BigDecimal), 2019-12-05 00:00:00.0(Timestamp), 440(Integer)
+2020-04-17 13:18:20.623 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.624 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.624 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7235(BigDecimal), 2019-12-06 00:00:00.0(Timestamp), 535(Integer)
+2020-04-17 13:18:20.637 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.639 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.639 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6578(BigDecimal), 2019-12-07 00:00:00.0(Timestamp), 645(Integer)
+2020-04-17 13:18:20.652 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.653 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.653 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6085(BigDecimal), 2019-12-08 00:00:00.0(Timestamp), 485(Integer)
+2020-04-17 13:18:20.666 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.667 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.667 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8167(BigDecimal), 2019-12-09 00:00:00.0(Timestamp), 595(Integer)
+2020-04-17 13:18:20.680 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.680 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.680 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8201(BigDecimal), 2019-12-10 00:00:00.0(Timestamp), 520(Integer)
+2020-04-17 13:18:20.693 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.694 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.694 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8428(BigDecimal), 2019-12-11 00:00:00.0(Timestamp), 740(Integer)
+2020-04-17 13:18:20.708 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.708 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.709 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4765(BigDecimal), 2019-12-12 00:00:00.0(Timestamp), 780(Integer)
+2020-04-17 13:18:20.721 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.722 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.722 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5806(BigDecimal), 2019-12-13 00:00:00.0(Timestamp), 410(Integer)
+2020-04-17 13:18:20.734 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.735 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.735 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6947(BigDecimal), 2019-12-14 00:00:00.0(Timestamp), 590(Integer)
+2020-04-17 13:18:20.748 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.748 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.749 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7358(BigDecimal), 2019-12-15 00:00:00.0(Timestamp), 400(Integer)
+2020-04-17 13:18:20.761 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.761 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.761 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5657(BigDecimal), 2019-12-16 00:00:00.0(Timestamp), 550(Integer)
+2020-04-17 13:18:20.774 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.775 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.775 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7693(BigDecimal), 2019-12-17 00:00:00.0(Timestamp), 780(Integer)
+2020-04-17 13:18:20.788 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.789 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.789 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7736(BigDecimal), 2019-12-18 00:00:00.0(Timestamp), 670(Integer)
+2020-04-17 13:18:20.802 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.802 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.802 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6815(BigDecimal), 2019-12-19 00:00:00.0(Timestamp), 920(Integer)
+2020-04-17 13:18:20.815 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.815 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.815 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4051(BigDecimal), 2019-12-20 00:00:00.0(Timestamp), 540(Integer)
+2020-04-17 13:18:20.829 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.829 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.829 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4956(BigDecimal), 2019-12-21 00:00:00.0(Timestamp), 500(Integer)
+2020-04-17 13:18:20.842 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.842 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.842 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6448(BigDecimal), 2019-12-22 00:00:00.0(Timestamp), 550(Integer)
+2020-04-17 13:18:20.855 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.855 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.855 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8107(BigDecimal), 2019-12-23 00:00:00.0(Timestamp), 735(Integer)
+2020-04-17 13:18:20.869 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.871 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.872 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7282(BigDecimal), 2019-12-24 00:00:00.0(Timestamp), 700(Integer)
+2020-04-17 13:18:20.886 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.889 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.890 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7613(BigDecimal), 2019-12-25 00:00:00.0(Timestamp), 445(Integer)
+2020-04-17 13:18:20.902 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.903 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.903 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5091(BigDecimal), 2019-12-26 00:00:00.0(Timestamp), 645(Integer)
+2020-04-17 13:18:20.916 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.916 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.917 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4674(BigDecimal), 2019-12-27 00:00:00.0(Timestamp), 970(Integer)
+2020-04-17 13:18:20.929 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.930 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.930 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8283(BigDecimal), 2019-12-28 00:00:00.0(Timestamp), 750(Integer)
+2020-04-17 13:18:20.943 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.944 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.944 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8158(BigDecimal), 2019-12-29 00:00:00.0(Timestamp), 715(Integer)
+2020-04-17 13:18:20.956 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.957 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.957 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5567(BigDecimal), 2019-12-30 00:00:00.0(Timestamp), 495(Integer)
+2020-04-17 13:18:20.969 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.970 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.970 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4802(BigDecimal), 2019-12-31 00:00:00.0(Timestamp), 390(Integer)
+2020-04-17 13:18:20.983 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.984 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.984 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6005(BigDecimal), 2020-01-01 00:00:00.0(Timestamp), 370(Integer)
+2020-04-17 13:18:20.996 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:20.997 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:20.997 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7125(BigDecimal), 2020-01-02 00:00:00.0(Timestamp), 640(Integer)
+2020-04-17 13:18:21.010 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.010 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.010 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5775(BigDecimal), 2020-01-03 00:00:00.0(Timestamp), 805(Integer)
+2020-04-17 13:18:21.023 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.023 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.023 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8526(BigDecimal), 2020-01-04 00:00:00.0(Timestamp), 590(Integer)
+2020-04-17 13:18:21.036 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.036 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.036 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8141(BigDecimal), 2020-01-05 00:00:00.0(Timestamp), 515(Integer)
+2020-04-17 13:18:21.049 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.049 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.049 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7674(BigDecimal), 2020-01-06 00:00:00.0(Timestamp), 540(Integer)
+2020-04-17 13:18:21.063 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.063 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.063 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6382(BigDecimal), 2020-01-07 00:00:00.0(Timestamp), 590(Integer)
+2020-04-17 13:18:21.075 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.075 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.075 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5148(BigDecimal), 2020-01-08 00:00:00.0(Timestamp), 960(Integer)
+2020-04-17 13:18:21.089 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.089 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.089 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8905(BigDecimal), 2020-01-09 00:00:00.0(Timestamp), 760(Integer)
+2020-04-17 13:18:21.102 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.102 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.102 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4933(BigDecimal), 2020-01-10 00:00:00.0(Timestamp), 460(Integer)
+2020-04-17 13:18:21.115 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.116 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.116 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8920(BigDecimal), 2020-01-11 00:00:00.0(Timestamp), 440(Integer)
+2020-04-17 13:18:21.129 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.129 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.129 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8754(BigDecimal), 2020-01-12 00:00:00.0(Timestamp), 1030(Integer)
+2020-04-17 13:18:21.141 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.142 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.142 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6054(BigDecimal), 2020-01-13 00:00:00.0(Timestamp), 530(Integer)
+2020-04-17 13:18:21.155 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.156 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.156 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8565(BigDecimal), 2020-01-14 00:00:00.0(Timestamp), 790(Integer)
+2020-04-17 13:18:21.170 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.170 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.170 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8403(BigDecimal), 2020-01-15 00:00:00.0(Timestamp), 865(Integer)
+2020-04-17 13:18:21.183 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.183 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.183 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8431(BigDecimal), 2020-01-16 00:00:00.0(Timestamp), 815(Integer)
+2020-04-17 13:18:21.196 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.196 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.196 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5454(BigDecimal), 2020-01-17 00:00:00.0(Timestamp), 980(Integer)
+2020-04-17 13:18:21.209 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.210 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.210 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7113(BigDecimal), 2020-01-18 00:00:00.0(Timestamp), 520(Integer)
+2020-04-17 13:18:21.222 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.223 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.223 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7601(BigDecimal), 2020-01-19 00:00:00.0(Timestamp), 760(Integer)
+2020-04-17 13:18:21.235 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.236 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.236 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4651(BigDecimal), 2020-01-20 00:00:00.0(Timestamp), 945(Integer)
+2020-04-17 13:18:21.249 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.250 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.250 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8780(BigDecimal), 2020-01-21 00:00:00.0(Timestamp), 475(Integer)
+2020-04-17 13:18:21.262 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.262 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.263 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6407(BigDecimal), 2020-01-22 00:00:00.0(Timestamp), 410(Integer)
+2020-04-17 13:18:21.275 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.275 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.275 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7579(BigDecimal), 2020-01-23 00:00:00.0(Timestamp), 955(Integer)
+2020-04-17 13:18:21.288 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.288 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.288 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7462(BigDecimal), 2020-01-24 00:00:00.0(Timestamp), 620(Integer)
+2020-04-17 13:18:21.301 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.301 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.301 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5960(BigDecimal), 2020-01-25 00:00:00.0(Timestamp), 670(Integer)
+2020-04-17 13:18:21.313 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.314 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.314 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4165(BigDecimal), 2020-01-26 00:00:00.0(Timestamp), 445(Integer)
+2020-04-17 13:18:21.326 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.327 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.327 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6704(BigDecimal), 2020-01-27 00:00:00.0(Timestamp), 620(Integer)
+2020-04-17 13:18:21.340 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.341 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.341 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7044(BigDecimal), 2020-01-28 00:00:00.0(Timestamp), 935(Integer)
+2020-04-17 13:18:21.354 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.354 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.355 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6218(BigDecimal), 2020-01-29 00:00:00.0(Timestamp), 510(Integer)
+2020-04-17 13:18:21.368 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.369 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.369 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6418(BigDecimal), 2020-01-30 00:00:00.0(Timestamp), 455(Integer)
+2020-04-17 13:18:21.382 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.383 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.383 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6930(BigDecimal), 2020-01-31 00:00:00.0(Timestamp), 550(Integer)
+2020-04-17 13:18:21.395 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.396 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.396 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7782(BigDecimal), 2020-02-01 00:00:00.0(Timestamp), 385(Integer)
+2020-04-17 13:18:21.409 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.409 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.409 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4918(BigDecimal), 2020-02-02 00:00:00.0(Timestamp), 405(Integer)
+2020-04-17 13:18:21.423 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.423 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.423 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8923(BigDecimal), 2020-02-03 00:00:00.0(Timestamp), 695(Integer)
+2020-04-17 13:18:21.435 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.436 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.436 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7342(BigDecimal), 2020-02-04 00:00:00.0(Timestamp), 460(Integer)
+2020-04-17 13:18:21.449 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.449 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.449 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7347(BigDecimal), 2020-02-05 00:00:00.0(Timestamp), 850(Integer)
+2020-04-17 13:18:21.462 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.462 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.462 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8418(BigDecimal), 2020-02-06 00:00:00.0(Timestamp), 485(Integer)
+2020-04-17 13:18:21.475 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.475 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.475 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7342(BigDecimal), 2020-02-07 00:00:00.0(Timestamp), 795(Integer)
+2020-04-17 13:18:21.488 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.488 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.489 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4346(BigDecimal), 2020-02-08 00:00:00.0(Timestamp), 455(Integer)
+2020-04-17 13:18:21.501 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.502 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.502 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6763(BigDecimal), 2020-02-09 00:00:00.0(Timestamp), 680(Integer)
+2020-04-17 13:18:21.514 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.514 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.515 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6087(BigDecimal), 2020-02-10 00:00:00.0(Timestamp), 760(Integer)
+2020-04-17 13:18:21.527 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.527 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.528 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6262(BigDecimal), 2020-02-11 00:00:00.0(Timestamp), 510(Integer)
+2020-04-17 13:18:21.540 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.540 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.540 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7924(BigDecimal), 2020-02-12 00:00:00.0(Timestamp), 940(Integer)
+2020-04-17 13:18:21.552 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.553 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.553 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7948(BigDecimal), 2020-02-13 00:00:00.0(Timestamp), 420(Integer)
+2020-04-17 13:18:21.565 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.565 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.565 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8280(BigDecimal), 2020-02-14 00:00:00.0(Timestamp), 455(Integer)
+2020-04-17 13:18:21.578 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.579 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.579 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7982(BigDecimal), 2020-02-15 00:00:00.0(Timestamp), 990(Integer)
+2020-04-17 13:18:21.591 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.592 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.592 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6720(BigDecimal), 2020-02-16 00:00:00.0(Timestamp), 905(Integer)
+2020-04-17 13:18:21.604 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.605 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.605 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8352(BigDecimal), 2020-02-17 00:00:00.0(Timestamp), 775(Integer)
+2020-04-17 13:18:21.618 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.619 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.619 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6770(BigDecimal), 2020-02-18 00:00:00.0(Timestamp), 865(Integer)
+2020-04-17 13:18:21.631 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.632 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.632 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7070(BigDecimal), 2020-02-19 00:00:00.0(Timestamp), 665(Integer)
+2020-04-17 13:18:21.645 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.646 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.646 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8928(BigDecimal), 2020-02-20 00:00:00.0(Timestamp), 680(Integer)
+2020-04-17 13:18:21.659 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.659 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.660 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6310(BigDecimal), 2020-02-21 00:00:00.0(Timestamp), 460(Integer)
+2020-04-17 13:18:21.672 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.673 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.673 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8968(BigDecimal), 2020-02-22 00:00:00.0(Timestamp), 880(Integer)
+2020-04-17 13:18:21.686 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.687 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.687 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5214(BigDecimal), 2020-02-23 00:00:00.0(Timestamp), 970(Integer)
+2020-04-17 13:18:21.701 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.701 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.702 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6958(BigDecimal), 2020-02-24 00:00:00.0(Timestamp), 810(Integer)
+2020-04-17 13:18:21.716 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.716 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.717 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6955(BigDecimal), 2020-02-25 00:00:00.0(Timestamp), 990(Integer)
+2020-04-17 13:18:21.730 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.730 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.730 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4358(BigDecimal), 2020-02-26 00:00:00.0(Timestamp), 630(Integer)
+2020-04-17 13:18:21.743 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.743 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.744 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8895(BigDecimal), 2020-02-27 00:00:00.0(Timestamp), 1000(Integer)
+2020-04-17 13:18:21.755 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.756 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.756 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7218(BigDecimal), 2020-02-28 00:00:00.0(Timestamp), 620(Integer)
+2020-04-17 13:18:21.769 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.770 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.770 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5629(BigDecimal), 2020-02-29 00:00:00.0(Timestamp), 355(Integer)
+2020-04-17 13:18:21.783 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.783 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.783 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4285(BigDecimal), 2020-03-01 00:00:00.0(Timestamp), 755(Integer)
+2020-04-17 13:18:21.797 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.797 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.797 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8892(BigDecimal), 2020-03-02 00:00:00.0(Timestamp), 645(Integer)
+2020-04-17 13:18:21.809 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.809 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.809 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4739(BigDecimal), 2020-03-03 00:00:00.0(Timestamp), 555(Integer)
+2020-04-17 13:18:21.822 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.822 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.822 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5516(BigDecimal), 2020-03-04 00:00:00.0(Timestamp), 865(Integer)
+2020-04-17 13:18:21.835 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.835 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.835 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5171(BigDecimal), 2020-03-05 00:00:00.0(Timestamp), 850(Integer)
+2020-04-17 13:18:21.847 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.847 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.847 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7467(BigDecimal), 2020-03-06 00:00:00.0(Timestamp), 870(Integer)
+2020-04-17 13:18:21.861 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.861 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.861 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8289(BigDecimal), 2020-03-07 00:00:00.0(Timestamp), 970(Integer)
+2020-04-17 13:18:21.874 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.874 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.874 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7325(BigDecimal), 2020-03-08 00:00:00.0(Timestamp), 920(Integer)
+2020-04-17 13:18:21.887 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.888 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.888 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6366(BigDecimal), 2020-03-09 00:00:00.0(Timestamp), 705(Integer)
+2020-04-17 13:18:21.900 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.901 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.901 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5427(BigDecimal), 2020-03-10 00:00:00.0(Timestamp), 430(Integer)
+2020-04-17 13:18:21.914 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.914 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.914 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8291(BigDecimal), 2020-03-11 00:00:00.0(Timestamp), 660(Integer)
+2020-04-17 13:18:21.927 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.927 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.927 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6064(BigDecimal), 2020-03-12 00:00:00.0(Timestamp), 705(Integer)
+2020-04-17 13:18:21.940 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.940 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.941 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6203(BigDecimal), 2020-03-13 00:00:00.0(Timestamp), 440(Integer)
+2020-04-17 13:18:21.954 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.955 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.955 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7204(BigDecimal), 2020-03-14 00:00:00.0(Timestamp), 550(Integer)
+2020-04-17 13:18:21.968 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.968 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.968 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4383(BigDecimal), 2020-03-15 00:00:00.0(Timestamp), 595(Integer)
+2020-04-17 13:18:21.982 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.982 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.982 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5084(BigDecimal), 2020-03-16 00:00:00.0(Timestamp), 1010(Integer)
+2020-04-17 13:18:21.995 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:21.995 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:21.996 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5016(BigDecimal), 2020-03-17 00:00:00.0(Timestamp), 465(Integer)
+2020-04-17 13:18:22.009 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.009 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.010 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4176(BigDecimal), 2020-03-18 00:00:00.0(Timestamp), 780(Integer)
+2020-04-17 13:18:22.022 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.023 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.023 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6215(BigDecimal), 2020-03-19 00:00:00.0(Timestamp), 780(Integer)
+2020-04-17 13:18:22.036 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.037 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.037 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8804(BigDecimal), 2020-03-20 00:00:00.0(Timestamp), 810(Integer)
+2020-04-17 13:18:22.050 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.050 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.051 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6463(BigDecimal), 2020-03-21 00:00:00.0(Timestamp), 850(Integer)
+2020-04-17 13:18:22.064 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.064 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.064 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4442(BigDecimal), 2020-03-22 00:00:00.0(Timestamp), 540(Integer)
+2020-04-17 13:18:22.076 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.076 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.077 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7822(BigDecimal), 2020-03-23 00:00:00.0(Timestamp), 370(Integer)
+2020-04-17 13:18:22.089 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.089 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.089 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8438(BigDecimal), 2020-03-24 00:00:00.0(Timestamp), 495(Integer)
+2020-04-17 13:18:22.102 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.102 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.102 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6639(BigDecimal), 2020-03-25 00:00:00.0(Timestamp), 665(Integer)
+2020-04-17 13:18:22.115 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.115 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.115 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8254(BigDecimal), 2020-03-26 00:00:00.0(Timestamp), 865(Integer)
+2020-04-17 13:18:22.128 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.128 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.128 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7179(BigDecimal), 2020-03-27 00:00:00.0(Timestamp), 720(Integer)
+2020-04-17 13:18:22.140 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.140 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.141 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4881(BigDecimal), 2020-03-28 00:00:00.0(Timestamp), 385(Integer)
+2020-04-17 13:18:22.154 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.155 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.155 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5236(BigDecimal), 2020-03-29 00:00:00.0(Timestamp), 860(Integer)
+2020-04-17 13:18:22.167 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.167 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.167 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8456(BigDecimal), 2020-03-30 00:00:00.0(Timestamp), 390(Integer)
+2020-04-17 13:18:22.180 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.181 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.181 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6870(BigDecimal), 2020-03-31 00:00:00.0(Timestamp), 510(Integer)
+2020-04-17 13:18:22.193 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.194 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.194 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4241(BigDecimal), 2020-04-01 00:00:00.0(Timestamp), 590(Integer)
+2020-04-17 13:18:22.208 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.208 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.208 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7112(BigDecimal), 2020-04-02 00:00:00.0(Timestamp), 715(Integer)
+2020-04-17 13:18:22.221 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.221 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.222 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5731(BigDecimal), 2020-04-03 00:00:00.0(Timestamp), 990(Integer)
+2020-04-17 13:18:22.235 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.235 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.235 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6277(BigDecimal), 2020-04-04 00:00:00.0(Timestamp), 905(Integer)
+2020-04-17 13:18:22.248 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.249 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.249 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6233(BigDecimal), 2020-04-05 00:00:00.0(Timestamp), 530(Integer)
+2020-04-17 13:18:22.261 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.261 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.261 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4322(BigDecimal), 2020-04-06 00:00:00.0(Timestamp), 610(Integer)
+2020-04-17 13:18:22.273 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.275 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.276 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5748(BigDecimal), 2020-04-07 00:00:00.0(Timestamp), 975(Integer)
+2020-04-17 13:18:22.290 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.291 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.292 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4572(BigDecimal), 2020-04-08 00:00:00.0(Timestamp), 830(Integer)
+2020-04-17 13:18:22.305 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.306 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.306 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8359(BigDecimal), 2020-04-09 00:00:00.0(Timestamp), 550(Integer)
+2020-04-17 13:18:22.319 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4890(BigDecimal), 2020-04-10 00:00:00.0(Timestamp), 695(Integer)
+2020-04-17 13:18:22.333 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.333 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.334 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7918(BigDecimal), 2020-04-11 00:00:00.0(Timestamp), 700(Integer)
+2020-04-17 13:18:22.347 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.348 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.348 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7159(BigDecimal), 2020-04-12 00:00:00.0(Timestamp), 740(Integer)
+2020-04-17 13:18:22.360 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.361 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.361 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5760(BigDecimal), 2020-04-13 00:00:00.0(Timestamp), 740(Integer)
+2020-04-17 13:18:22.373 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.374 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.374 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7578(BigDecimal), 2020-04-14 00:00:00.0(Timestamp), 620(Integer)
+2020-04-17 13:18:22.387 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.387 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.387 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8750(BigDecimal), 2020-04-15 00:00:00.0(Timestamp), 380(Integer)
+2020-04-17 13:18:22.400 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.401 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.401 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5374(BigDecimal), 2020-04-16 00:00:00.0(Timestamp), 860(Integer)
+2020-04-17 13:18:22.413 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.414 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.414 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6734(BigDecimal), 2020-04-17 00:00:00.0(Timestamp), 440(Integer)
+2020-04-17 13:18:22.427 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.428 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.428 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8145(BigDecimal), 2020-04-18 00:00:00.0(Timestamp), 410(Integer)
+2020-04-17 13:18:22.440 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.441 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.441 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7815(BigDecimal), 2020-04-19 00:00:00.0(Timestamp), 640(Integer)
+2020-04-17 13:18:22.453 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.454 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.454 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8570(BigDecimal), 2020-04-20 00:00:00.0(Timestamp), 590(Integer)
+2020-04-17 13:18:22.467 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.468 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.468 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8299(BigDecimal), 2020-04-21 00:00:00.0(Timestamp), 535(Integer)
+2020-04-17 13:18:22.481 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.481 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.481 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5026(BigDecimal), 2020-04-22 00:00:00.0(Timestamp), 380(Integer)
+2020-04-17 13:18:22.494 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.494 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.494 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8136(BigDecimal), 2020-04-23 00:00:00.0(Timestamp), 970(Integer)
+2020-04-17 13:18:22.506 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.507 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.507 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5262(BigDecimal), 2020-04-24 00:00:00.0(Timestamp), 735(Integer)
+2020-04-17 13:18:22.519 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.520 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.521 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5976(BigDecimal), 2020-04-25 00:00:00.0(Timestamp), 970(Integer)
+2020-04-17 13:18:22.534 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.535 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.535 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7286(BigDecimal), 2020-04-26 00:00:00.0(Timestamp), 860(Integer)
+2020-04-17 13:18:22.548 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.548 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.548 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6084(BigDecimal), 2020-04-27 00:00:00.0(Timestamp), 1010(Integer)
+2020-04-17 13:18:22.561 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.562 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.562 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4197(BigDecimal), 2020-04-28 00:00:00.0(Timestamp), 515(Integer)
+2020-04-17 13:18:22.574 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.575 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.575 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8030(BigDecimal), 2020-04-29 00:00:00.0(Timestamp), 400(Integer)
+2020-04-17 13:18:22.587 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.587 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.588 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5497(BigDecimal), 2020-04-30 00:00:00.0(Timestamp), 495(Integer)
+2020-04-17 13:18:22.600 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.601 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.601 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7467(BigDecimal), 2020-05-01 00:00:00.0(Timestamp), 700(Integer)
+2020-04-17 13:18:22.614 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.614 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.615 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8596(BigDecimal), 2020-05-02 00:00:00.0(Timestamp), 390(Integer)
+2020-04-17 13:18:22.628 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.629 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.629 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6224(BigDecimal), 2020-05-03 00:00:00.0(Timestamp), 430(Integer)
+2020-04-17 13:18:22.642 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.642 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.642 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7768(BigDecimal), 2020-05-04 00:00:00.0(Timestamp), 480(Integer)
+2020-04-17 13:18:22.654 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.655 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.655 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5814(BigDecimal), 2020-05-05 00:00:00.0(Timestamp), 770(Integer)
+2020-04-17 13:18:22.668 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.669 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.669 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4062(BigDecimal), 2020-05-06 00:00:00.0(Timestamp), 575(Integer)
+2020-04-17 13:18:22.682 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.682 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.682 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4357(BigDecimal), 2020-05-07 00:00:00.0(Timestamp), 420(Integer)
+2020-04-17 13:18:22.695 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.695 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.695 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5032(BigDecimal), 2020-05-08 00:00:00.0(Timestamp), 1010(Integer)
+2020-04-17 13:18:22.709 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.709 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.709 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4553(BigDecimal), 2020-05-09 00:00:00.0(Timestamp), 695(Integer)
+2020-04-17 13:18:22.721 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.722 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.722 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8618(BigDecimal), 2020-05-10 00:00:00.0(Timestamp), 640(Integer)
+2020-04-17 13:18:22.734 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.735 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.735 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5512(BigDecimal), 2020-05-11 00:00:00.0(Timestamp), 540(Integer)
+2020-04-17 13:18:22.747 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.748 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.748 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7155(BigDecimal), 2020-05-12 00:00:00.0(Timestamp), 405(Integer)
+2020-04-17 13:18:22.760 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.761 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.761 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5904(BigDecimal), 2020-05-13 00:00:00.0(Timestamp), 630(Integer)
+2020-04-17 13:18:22.774 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.774 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.774 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5723(BigDecimal), 2020-05-14 00:00:00.0(Timestamp), 405(Integer)
+2020-04-17 13:18:22.787 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.788 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.788 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7133(BigDecimal), 2020-05-15 00:00:00.0(Timestamp), 425(Integer)
+2020-04-17 13:18:22.801 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.801 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.801 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6507(BigDecimal), 2020-05-16 00:00:00.0(Timestamp), 705(Integer)
+2020-04-17 13:18:22.815 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.815 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.816 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5436(BigDecimal), 2020-05-17 00:00:00.0(Timestamp), 1015(Integer)
+2020-04-17 13:18:22.829 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.829 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.829 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7482(BigDecimal), 2020-05-18 00:00:00.0(Timestamp), 610(Integer)
+2020-04-17 13:18:22.841 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.842 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.842 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6440(BigDecimal), 2020-05-19 00:00:00.0(Timestamp), 595(Integer)
+2020-04-17 13:18:22.855 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.855 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.855 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7036(BigDecimal), 2020-05-20 00:00:00.0(Timestamp), 510(Integer)
+2020-04-17 13:18:22.867 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.867 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.867 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4600(BigDecimal), 2020-05-21 00:00:00.0(Timestamp), 770(Integer)
+2020-04-17 13:18:22.880 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.880 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.881 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6188(BigDecimal), 2020-05-22 00:00:00.0(Timestamp), 1015(Integer)
+2020-04-17 13:18:22.893 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.894 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.894 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5919(BigDecimal), 2020-05-23 00:00:00.0(Timestamp), 595(Integer)
+2020-04-17 13:18:22.906 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.907 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.907 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7363(BigDecimal), 2020-05-24 00:00:00.0(Timestamp), 890(Integer)
+2020-04-17 13:18:22.920 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.920 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.920 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8464(BigDecimal), 2020-05-25 00:00:00.0(Timestamp), 1000(Integer)
+2020-04-17 13:18:22.933 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.933 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.933 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5510(BigDecimal), 2020-05-26 00:00:00.0(Timestamp), 660(Integer)
+2020-04-17 13:18:22.947 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.947 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.947 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5917(BigDecimal), 2020-05-27 00:00:00.0(Timestamp), 670(Integer)
+2020-04-17 13:18:22.959 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.959 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.959 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4107(BigDecimal), 2020-05-28 00:00:00.0(Timestamp), 960(Integer)
+2020-04-17 13:18:22.972 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.972 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.972 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6426(BigDecimal), 2020-05-29 00:00:00.0(Timestamp), 805(Integer)
+2020-04-17 13:18:22.985 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.985 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.986 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6240(BigDecimal), 2020-05-30 00:00:00.0(Timestamp), 510(Integer)
+2020-04-17 13:18:22.998 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:22.999 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:22.999 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8417(BigDecimal), 2020-05-31 00:00:00.0(Timestamp), 370(Integer)
+2020-04-17 13:18:23.012 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.013 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.013 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4728(BigDecimal), 2020-06-01 00:00:00.0(Timestamp), 830(Integer)
+2020-04-17 13:18:23.025 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.026 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.026 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5061(BigDecimal), 2020-06-02 00:00:00.0(Timestamp), 500(Integer)
+2020-04-17 13:18:23.040 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.040 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.040 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6248(BigDecimal), 2020-06-03 00:00:00.0(Timestamp), 535(Integer)
+2020-04-17 13:18:23.053 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.053 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.053 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6754(BigDecimal), 2020-06-04 00:00:00.0(Timestamp), 420(Integer)
+2020-04-17 13:18:23.065 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.066 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.066 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5045(BigDecimal), 2020-06-05 00:00:00.0(Timestamp), 830(Integer)
+2020-04-17 13:18:23.078 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.079 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.079 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6106(BigDecimal), 2020-06-06 00:00:00.0(Timestamp), 605(Integer)
+2020-04-17 13:18:23.093 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.093 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.093 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6214(BigDecimal), 2020-06-07 00:00:00.0(Timestamp), 1020(Integer)
+2020-04-17 13:18:23.107 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.107 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.108 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8105(BigDecimal), 2020-06-08 00:00:00.0(Timestamp), 870(Integer)
+2020-04-17 13:18:23.121 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.121 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.121 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6313(BigDecimal), 2020-06-09 00:00:00.0(Timestamp), 350(Integer)
+2020-04-17 13:18:23.134 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.135 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.135 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8717(BigDecimal), 2020-06-10 00:00:00.0(Timestamp), 640(Integer)
+2020-04-17 13:18:23.148 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.149 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.149 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5059(BigDecimal), 2020-06-11 00:00:00.0(Timestamp), 665(Integer)
+2020-04-17 13:18:23.162 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.163 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.163 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4788(BigDecimal), 2020-06-12 00:00:00.0(Timestamp), 870(Integer)
+2020-04-17 13:18:23.175 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.176 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.176 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8915(BigDecimal), 2020-06-13 00:00:00.0(Timestamp), 520(Integer)
+2020-04-17 13:18:23.188 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.188 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.189 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6774(BigDecimal), 2020-06-14 00:00:00.0(Timestamp), 595(Integer)
+2020-04-17 13:18:23.201 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.202 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.202 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6841(BigDecimal), 2020-06-15 00:00:00.0(Timestamp), 945(Integer)
+2020-04-17 13:18:23.214 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.215 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.215 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4792(BigDecimal), 2020-06-16 00:00:00.0(Timestamp), 940(Integer)
+2020-04-17 13:18:23.228 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.228 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.229 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6880(BigDecimal), 2020-06-17 00:00:00.0(Timestamp), 805(Integer)
+2020-04-17 13:18:23.241 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.242 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.242 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4909(BigDecimal), 2020-06-18 00:00:00.0(Timestamp), 1020(Integer)
+2020-04-17 13:18:23.255 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.255 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.255 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5147(BigDecimal), 2020-06-19 00:00:00.0(Timestamp), 755(Integer)
+2020-04-17 13:18:23.268 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.268 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.268 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5566(BigDecimal), 2020-06-20 00:00:00.0(Timestamp), 665(Integer)
+2020-04-17 13:18:23.281 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.281 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.282 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4683(BigDecimal), 2020-06-21 00:00:00.0(Timestamp), 860(Integer)
+2020-04-17 13:18:23.294 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.295 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.295 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 6427(BigDecimal), 2020-06-22 00:00:00.0(Timestamp), 845(Integer)
+2020-04-17 13:18:23.308 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.308 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.308 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 8329(BigDecimal), 2020-06-23 00:00:00.0(Timestamp), 870(Integer)
+2020-04-17 13:18:23.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.320 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 4393(BigDecimal), 2020-06-24 00:00:00.0(Timestamp), 695(Integer)
+2020-04-17 13:18:23.333 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.333 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.333 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 7222(BigDecimal), 2020-06-25 00:00:00.0(Timestamp), 630(Integer)
+2020-04-17 13:18:23.346 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.346 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==>  Preparing: INSERT INTO market_data ( sale, time, flow ) VALUES ( ?, ?, ? ) 
+2020-04-17 13:18:23.346 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : ==> Parameters: 5259(BigDecimal), 2020-06-26 00:00:00.0(Timestamp), 530(Integer)
+2020-04-17 13:18:23.360 DEBUG 1196 --- [main] c.b.c.m.mapper.MarketDataMapper.insert   : <==    Updates: 1
+2020-04-17 13:18:23.378  INFO 1196 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

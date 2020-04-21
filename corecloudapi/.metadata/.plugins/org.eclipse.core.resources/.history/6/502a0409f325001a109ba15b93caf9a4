@@ -1,0 +1,1374 @@
+---
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: "朝阳大学城 室内地图 core-cloud??Restful API?"
+host: www.sonmarket.com
+schemes: [http, https]
+produces:
+  - application/json
+basePath: /market
+parameters:
+  token:
+    name: token
+    type: string
+    in: header
+    required: true
+  tokenQuery:
+    name: token
+    type: string
+    in: query
+    required: true
+paths:
+  /common/sms:
+    post:
+      tags:
+        - 公共接口
+      description: 短信服务
+      operationId: sendvcode
+      parameters:
+        - name: phone
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  /common/fileUpload:
+    post:
+      tags:
+        - 公共接口
+      description: 文件上传
+      operationId: uploadFile
+      consumes: 
+        - multipart/form-data
+      parameters:
+        - name: file
+          type: file
+          in: formData
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            title: fileUploadVOInfo
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data: 
+                $ref: "#/definitions/fileUploadVO"
+  /common/byteFileUpload:
+    post:
+      tags:
+        - 公共接口
+      description: byte文件上传
+      operationId: uploadByteFile
+      consumes:
+        - application/octet-stream
+      parameters:
+        - in: body
+          name: file
+          schema:
+            type: string
+            format: byte
+      responses:
+        200:
+          description: success
+          schema:
+            title: fileUploadVOInfo
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data: 
+                $ref: "#/definitions/fileUploadVO"
+  /login:
+    post:
+      tags:
+        - 登录
+      description: 登录
+      operationId: login
+      parameters:
+        - name: phone
+          type: string
+          in: query
+          description: 电话
+        - name: code
+          type: string
+          in: query
+          description: code
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: UserVOInfo
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: "#/definitions/UserVO"
+  /store/details:
+    get: 
+      tags:
+        - 店铺信息交互
+      description: 获取店铺详情
+      operationId: storedetails
+      parameters:
+        - name: fid
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/StoreInfoVO"
+            
+           
+         
+  
+  /store/ranklist:
+    get: 
+      tags:
+        - 店铺信息交互
+      description: 店铺排行列表  
+      operationId: ranklist
+      parameters:
+        - name: priority
+          type: string
+          in: query
+          required: true
+        - name: time
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: ranklist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/StoreRankVO"
+ 
+
+  /store/pot_cust:
+    get: 
+      tags:
+        - 店铺信息交互
+      description: 店铺意向客户列表  
+      operationId: potcustlist
+      parameters:
+        - name: fid
+          type: string
+          in: query
+          required: true
+        
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: potcustlist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/potCustVO"
+  
+  /store/translist:
+    get: 
+      tags:
+        - 店铺信息交互
+      description: 店铺转化率排行
+      operationId: translist
+      parameters:
+        - name: time
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: translist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items:
+                  $ref: "#/definitions/StoreTransVO"
+  
+  
+  
+  
+  
+  
+  
+  /map/storelist:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图店铺列表 
+      operationId: storelist
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+        - name: floor
+          type: string
+          in: query
+          required: true    
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: storeList
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items:
+                  type: object
+                  properties: 
+                    name: 
+                      type: string
+                    status:
+                      type: string
+                    fid:
+                      type: string
+                    
+
+  /map/totalData:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 地图页数据交互
+      operationId: totalData
+      parameters:
+        - name: floor
+          type: string
+          in: query
+          required: true
+        - name: type
+          type: string
+          in: query
+          required: true
+          description: 0 客流量 1 销售额 2 坪效 3 集客力    
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: totalData
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                 $ref: "#/definitions/dataObject"  
+                
+
+ 
+                 
+                
+ 
+  /map/hotchart:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图页热力图数据 0(客流) 1(坪效)
+      operationId: hotchart
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: hotchart
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items:
+                  type: object
+                  properties:
+                    x:
+                      type: integer
+                    y: 
+                      type: integer
+                    value: 
+                      type: integer  
+ 
+ 
+  
+
+ 
+  /map/equipdetail:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图页设备信息
+      operationId: equipdetail
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: equipdetail
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                  $ref: "#/definitions/EquipVO"
+                  
+ 
+  /map/equiplist:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图页设备列表 600015(安防) 600014(电梯) 600013(识别器)
+      operationId: equiplist
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: equiplist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items: 
+                  type: 
+                    integer
+  
+  /map/monitordetail:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图页监控信息
+      operationId: monitordetail
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: monitordetail
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: object
+                properties:
+                  name: 
+                    type: string
+                  status: 
+                    type: string
+                  plotTime: 
+                    type: string
+                  postition:
+                    type: string
+                  frameurl:
+                    type: string 
+                  num: 
+                    type: integer   
+                    
+  
+  /map/elevatordetail:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图页电梯信息
+      operationId: elevatordetail
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+           type: object
+           title: elevatordetail
+           properties: 
+             code: 
+               type: integer
+             msg: 
+               type: string
+             data: 
+               type: object
+               properties:
+                 name: 
+                   type: string
+                 status: 
+                   type: string
+                 plotTime: 
+                   type: string
+                 lastRepair: 
+                   type: string
+                 repairTime:
+                   type: string   
+                     
+                    
+  
+  /map/recognizeretail:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取地图页监控信息
+      operationId: recognizeretail
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: recognizeretail
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: object
+                properties:
+                  name: 
+                   type: string
+                  status: 
+                   type: string
+                  plotTime: 
+                   type: string
+                  lastRepair: 
+                   type: string
+                  repairTime:
+                   type: string  
+   
+  /map/cleanerlist:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取清洁员工列表
+      operationId: cleanerlist
+      parameters:
+        - name: floor
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: cleanerlist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items:
+                  $ref: "#/definitions/CleanerVO"
+ 
+  /map/guardlist:
+    get: 
+      tags:
+        - 地图页数据交互
+      description: 获取保安员工列表 
+      operationId: guardlist
+      parameters:
+        - name: floor
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: guardlist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items:
+                  $ref: "#/definitions/GuardVO"
+ 
+  
+ 
+  /home/index:
+    get: 
+      tags:
+        - 主页数据接口
+      description: 主页展板   
+      operationId: myindex
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: myindex
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                  $ref: "#/definitions/IndexVO" 
+  
+  /home/todaymsg:
+    get: 
+      tags:
+        - 主页数据接口
+      description: 0(到期提醒) 1(客流消息) 2(销售消息) 3(客流销售额) 4(保安) 5(保洁)  
+      operationId: todaymsg
+      responses:
+        200:
+           description: 0(到期提醒) 1(客流消息) 2(销售消息) 3(客流销售额) 4(保安) 5(保洁)
+           schema:
+            type: object
+            title: todaymsg
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:          
+                  $ref: "#/definitions/TodayMsgVO"   
+  
+  /home/remind:
+    get: 
+      tags:
+        - 主页数据接口
+      description: 主页消息提醒
+      operationId: remind
+      parameters:
+        - name: type
+          type: integer
+          in: query
+          required: true
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: remind
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data: 
+                type: array
+                items: 
+                  type: string
+  
+  /data/formatratio:
+    get: 
+      tags:
+        - 数据看板
+      description: 获取业态占比   
+      operationId: formatratio
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: formatratio
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    catname:
+                      type: string
+                    tatio: 
+                      type: integer 
+  
+  /data/flowview:
+    get: 
+      tags:
+        - 数据看板
+      description: 流量概览页上半部分
+      operationId: flowview
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: flowview
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                  $ref: "#/definitions/FlowViewVO" 
+ 
+  /data/flowtrend:
+    get: 
+      tags:
+        - 数据看板
+      description: 流量趋势（流量概览页下半部分）   
+      operationId: flowtrend
+     
+      parameters:
+        - name: timerange
+          type: integer 
+          description: 0 1 2（周|月|年）
+          in: query
+          required: true
+      
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: flowtrend
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/FlowTrendVO" 
+ 
+  /data/kpiview:
+    get: 
+      tags:
+        - 数据看板
+      description: kpi概览  
+      operationId: kpiview
+     
+      parameters:
+        - name: this
+          type: string
+          in: query
+          required: true
+          description: 当次时间
+        - name: last
+          type: string
+          in: query
+          required: true
+          description: 上次时间  
+        
+      
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: kpiview
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/KpiViewVO"  
+ 
+ 
+  /data/kpitrend:
+    get: 
+      tags:
+        - 数据看板
+      description: kpi趋势 返回数据 0 1 2 3 (客流量|平均集客力|销售额|平均坪效)  
+      operationId: kpitrend
+    
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: kpitrend
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/KpiTrendVO"  
+  
+  /data/marketflowcompare:
+    get: 
+      tags:
+        - 数据看板
+      description: 商场流量对比  
+      operationId: marketflowcompare
+      parameters:
+        - name: startdate
+          description: 开始时间
+          type: string
+          in: query
+          required: true
+          
+        - name: enddate
+          type: string
+          description: 结束时间
+          in: query
+          required: true 
+          
+        - name: time
+          type: string
+          description: 时间范围(小时)
+          in: query
+          required: true   
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: marketflowcompare
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    position: 
+                      type: string
+                    value: 
+                      type: integer  
+  
+  
+  /data/storetflowcompare:
+    get: 
+      tags:
+        - 数据看板
+      description: 商铺流量对比   
+      operationId: storetflowcompare
+      parameters:
+        - name: floor
+          type: string
+          in: query
+          required: true
+          
+        - name: renge
+          type: string
+          in: query
+          required: true 
+          
+        - name: date
+          type: string
+          in: query
+          required: true   
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: storetflowcompare
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name: 
+                      type: string
+                    value: 
+                      type: integer  
+         
+  /data/flowtop5:
+    get: 
+      tags:
+        - 数据看板
+      description: 客流量TOP5   
+      operationId: flowtop5
+      parameters:
+        - name: datarange
+          type: string
+          in: query
+          required: true
+        - name: timerange
+          type: string
+          in: query
+          required: true  
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: flowtop5
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name: 
+                      type: string
+                    value: 
+                      type: integer  
+  
+  
+  /data/nownotify:
+    get: 
+      tags:
+        - 数据看板
+      description: 当前提示（实时消息中的消息喇叭） 
+      operationId: nownotify
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: nownotify
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  type: string                                
+ 
+  /data/formatdistri:
+    get: 
+      tags:
+        - 数据看板
+      description: 业态分布   
+      operationId: formatdistri
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: formatdistri
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items: 
+                  $ref: "#/definitions/FormatDistriVO"
+                      
+                      
+  /data/brandlist:
+    get: 
+      tags:
+        - 数据看板
+      description: 品牌列表   
+      operationId: brandlist
+      parameters:
+        - name: format
+          type: string
+          in: query
+          description: 业态
+          required: true
+        - name: floor
+          type: string
+          in: query
+          required: true 
+        - name: page
+          type: integer
+          in: query
+          description: 第几页
+          required: true  
+        
+      responses:
+        200:
+           description: success
+           schema:
+            type: object
+            title: brandlist
+            properties: 
+              code: 
+                type: integer
+              msg: 
+                type: string
+              data:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    brand:
+                      type: string
+                    picurl:
+                      type: integer        
+ 
+  /contract:
+    get: 
+      tags:
+        - 获取合同文件 
+      description: 获取合同文件
+      operationId: getContractFiles
+      responses:
+        200: 
+          description: success
+          schema:
+            type: file
+
+  
+definitions:
+  baseVO:
+    type: object
+    properties:
+      code:
+        type: integer
+      msg:
+        type: string
+      data:
+
+        type: string
+  UserVO:
+    type: object
+    properties:
+      id:
+        type: string
+      token:
+        type: string
+      img:
+        type: string
+        description: 图片
+      name:
+        type: string
+        description: 用户名
+
+  StoreInfoVO:
+    type: object
+    properties: 
+      status:
+        type: string
+        description: 店铺状态 
+      marketNum:
+        type: string
+        description: 商场编号
+      fid:
+        type: string
+        description: 地图编号
+      tenantName: 
+        type: string
+        description: 租户名字
+      tenantTel:
+        type: string
+        description: 租户电话
+      busyCat:
+        type: string
+        description: 经营类目
+      brand:
+        type: string
+        description: 品牌
+      monthRent: 
+        type: integer
+        description: 月租
+      frontMoney: 
+        type: integer
+        description: 定金
+      contractNum: 
+        type: string
+        description: 合同编号
+      usableArea: 
+        type: string
+        description: 可用面积
+      spec:
+        type: string
+        description: 规格（长X宽X高）
+      totalArea:
+        type: string
+        description: 总面积
+      picName:
+        type: string
+        description: 负责人
+      picTel:
+        type: string
+        description: 负责人电话
+      leaseTime:
+        type: string
+        description: 日期  
+
+  IndexVO:
+    type: object
+    description: 首页信息
+    properties:
+      account:
+        type: string
+        description: 账号
+      position:
+        type: string
+        description: 职位
+      dateflow:
+        type: integer
+        description: 今日客流
+      formatdistri:
+        type: array
+        items: 
+          $ref: "#/definitions/FormatDistriVO"
+        
+      top3:
+        type: array
+        description: 店铺转化率 top3
+        items:
+            $ref: "#/definitions/StoreTransVO"
+      todayMsg: 
+        type: array
+        items:
+          type: string
+              
+
+
+  FormatDistriVO:
+      type: object
+      properties:
+        brands:
+          type: string
+          description: 品牌
+        amount:
+          type: integer
+          description: 数量
+        picUrl:
+          type: string
+            
+  
+  TrendClientVO:
+    type: object
+    description: 店铺意向客户
+    properties:
+      name:
+        type: string
+      tel:
+        type: string
+      picname:
+        type: string
+        description: 负责人姓名
+      offer:
+        type: integer
+        description: 客户报价
+
+
+  StoreTransVO:
+    type: object
+    description: 店铺转化率VO
+    properties:
+      name:
+        type: string
+        description: 店铺名
+      flow:
+        type: integer
+        description: 流量
+      salevolume:
+        type: integer
+        description: 销售额
+      rate:
+        type: integer
+        description: 转化率
+
+  StoreRankVO:
+    type: object
+    description: 店铺排行
+    properties:
+      name:
+        type: string
+        description: 店铺名
+      plateaueffect :
+        type: integer
+        description: 坪效
+      collectpower:
+        type: integer
+        description: 集客力
+      score:
+        type: integer
+        description: 评分
+        
+  TodayMsgVO:
+    type: object
+    description: 实时消息（今日总结）
+    properties:
+      totalflow:
+        type: integer
+        description: 总客流
+      totalsales :
+        type: integer
+        description: 总销售额
+      longMSg: 
+        type: string
+        description: 长消息
+      shortMsg:
+        type: array
+        description: 0(到期提醒) 1(客流消息) 2(销售消息) 3(客流销售额) 4(保安) 5(保洁) 
+        items:
+          type: string 
+            
+
+
+  CleanerVO:
+    type: object
+    description: 保洁
+    properties:
+      name:
+        type: string
+      region:
+        type: string
+        description: 负责区域
+      workTime:
+        type: string
+        description: 工作时间
+      regionList:
+        type: string
+        description: fid集合  
+
+  GuardVO:
+    type: object
+    description: 保安
+    properties:
+      name:
+        type: string
+      route:
+        type: array
+        items: 
+          type: object
+          properties:
+            x: 
+              type: string
+            y: 
+              type: string  
+              
+      shiftTime:
+        type: string
+        description: 换班时间
+
+  FlowViewVO:
+    type: object
+    description: 流量总览上半区
+    properties:
+      totalflow:
+        type: integer
+        description: 今日总客流量
+      yestflow:
+        type: integer
+        description: 昨日总客流量
+      usedstore:
+        type: integer
+        description: 已入驻商户数量
+      totalstore:
+        type: integer
+        description: 总商户数量  
+      totalarea:
+        type: integer
+        description: 使用面积
+      usedarea:
+        type: integer
+        description: 总面积
+      power:
+        type: integer
+        description: 今日集客力
+      yestpower:
+        type: integer
+        description: 昨日集客力
+  FlowTrendVO:
+    type: object
+    description: 流量趋势
+    properties:
+      time:
+        type: string
+        description: 时间
+      value:
+        type: integer
+        description: 值
+
+  KpiViewVO:
+    type: object
+    description: 经营kpi概览
+    properties:
+      name:
+        type: string
+      this:
+        type: integer
+        description: 当前时间段kpi
+      last:
+        type: integer
+        description: 上次时间段kpi
+      thanlast:
+        type: integer
+        description: 较上次变化
+
+
+  KpiTrendVO:
+    type: array
+    description: kpi趋势对比
+    items:
+      type: object
+      properties:
+        name:
+          type: integer
+          description: 0 1 2 3 (客流量|平均集客力|销售额|平均坪效)
+        trendlist:
+          type: object
+          properties: 
+            day:
+              type: string
+            value:
+              type: integer      
+      
+
+  fileUploadVO:
+    type: object
+    properties:
+      frontUrl:
+        type: string
+        description: 文件上传
+      afterUrl:
+        type: string
+        description: afterUrl
+      fullUrl:
+        type: string
+        description: fullUrl
+  potCustVO:
+    type: object
+    properties:
+      brand:
+        type: string
+        description: 品牌名
+      name:
+        type: string
+        description: 客户姓名
+      tel:
+        type: string
+        description: 客户电话
+      picname:
+        type: string
+        description: 负责人电话
+      offer:
+        type: integer
+        description: 报价  
+    
+    
+  EquipVO:
+          type: object
+          properties:
+             equipNum:
+               type: string
+             plot_time:
+               type: string
+             fid:
+               type: string 
+             status:
+               type: integer 
+             videoUrl:
+               type: string
+             mtcTime:
+               type: string
+             repair:
+               type: string  
+             floor:
+               type: integer      
+  
+  dataObject:
+    type: object
+    properties:
+      total:
+        type: integer
+      single:
+        type: array
+        items:
+          type: object
+          properties:
+             fid:
+               type: string
+             amount:
+               type: integer
+             xpos:
+               type: string 
+             ypos:
+               type: string   
+                        
+  
+        
+                
+
+

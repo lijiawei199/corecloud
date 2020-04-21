@@ -1,0 +1,206 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * FieldVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class FieldVO   {
+  @JsonProperty("busyTime")
+  private String busyTime = null;
+
+  @JsonProperty("fieldId")
+  private Integer fieldId = null;
+
+  @JsonProperty("pos")
+  private String pos = null;
+
+  @JsonProperty("fieldName")
+  private String fieldName = null;
+
+  @JsonProperty("collect")
+  private Boolean collect = null;
+
+  @JsonProperty("distance")
+  private Double distance = null;
+
+  public FieldVO busyTime(String busyTime) {
+    this.busyTime = busyTime;
+    return this;
+  }
+
+  /**
+   * Get busyTime
+   * @return busyTime
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getBusyTime() {
+    return busyTime;
+  }
+
+  public void setBusyTime(String busyTime) {
+    this.busyTime = busyTime;
+  }
+
+  public FieldVO fieldId(Integer fieldId) {
+    this.fieldId = fieldId;
+    return this;
+  }
+
+  /**
+   * Get fieldId
+   * @return fieldId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getFieldId() {
+    return fieldId;
+  }
+
+  public void setFieldId(Integer fieldId) {
+    this.fieldId = fieldId;
+  }
+
+  public FieldVO pos(String pos) {
+    this.pos = pos;
+    return this;
+  }
+
+  /**
+   * Get pos
+   * @return pos
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getPos() {
+    return pos;
+  }
+
+  public void setPos(String pos) {
+    this.pos = pos;
+  }
+
+  public FieldVO fieldName(String fieldName) {
+    this.fieldName = fieldName;
+    return this;
+  }
+
+  /**
+   * Get fieldName
+   * @return fieldName
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getFieldName() {
+    return fieldName;
+  }
+
+  public void setFieldName(String fieldName) {
+    this.fieldName = fieldName;
+  }
+
+  public FieldVO collect(Boolean collect) {
+    this.collect = collect;
+    return this;
+  }
+
+  /**
+   * Get collect
+   * @return collect
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Boolean Collect() {
+    return collect;
+  }
+
+  public void setCollect(Boolean collect) {
+    this.collect = collect;
+  }
+
+  public FieldVO distance(Double distance) {
+    this.distance = distance;
+    return this;
+  }
+
+  /**
+   * Get distance
+   * @return distance
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Double getDistance() {
+    return distance;
+  }
+
+  public void setDistance(Double distance) {
+    this.distance = distance;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    FieldVO fieldVO = (FieldVO) o;
+    return Objects.equals(this.busyTime, fieldVO.busyTime) &&
+        Objects.equals(this.fieldId, fieldVO.fieldId) &&
+        Objects.equals(this.pos, fieldVO.pos) &&
+        Objects.equals(this.fieldName, fieldVO.fieldName) &&
+        Objects.equals(this.collect, fieldVO.collect) &&
+        Objects.equals(this.distance, fieldVO.distance);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(busyTime, fieldId, pos, fieldName, collect, distance);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class FieldVO {\n");
+    
+    sb.append("    busyTime: ").append(toIndentedString(busyTime)).append("\n");
+    sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
+    sb.append("    pos: ").append(toIndentedString(pos)).append("\n");
+    sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
+    sb.append("    collect: ").append(toIndentedString(collect)).append("\n");
+    sb.append("    distance: ").append(toIndentedString(distance)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

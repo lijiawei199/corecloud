@@ -1,0 +1,606 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * OrderVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class OrderVO   {
+  @JsonProperty("skiType")
+  private String skiType = null;
+
+  @JsonProperty("action")
+  private String action = null;
+
+  @JsonProperty("createTime")
+  private String createTime = null;
+
+  @JsonProperty("stuTel")
+  private String stuTel = null;
+
+  @JsonProperty("eat")
+  private String eat = null;
+
+  @JsonProperty("state")
+  private Integer state = null;
+
+  @JsonProperty("money")
+  private String money = null;
+
+  @JsonProperty("stuOpenId")
+  private String stuOpenId = null;
+
+  @JsonProperty("coachOpenId")
+  private String coachOpenId = null;
+
+  @JsonProperty("fieldId")
+  private Integer fieldId = null;
+
+  @JsonProperty("avataUrl")
+  private String avataUrl = null;
+
+  @JsonProperty("fieldName")
+  private String fieldName = null;
+
+  @JsonProperty("singLevel")
+  private String singLevel = null;
+
+  @JsonProperty("orderId")
+  private String orderId = null;
+
+  @JsonProperty("nickName")
+  private String nickName = null;
+
+  @JsonProperty("gender")
+  private String gender = null;
+
+  @JsonProperty("refundApllyTime")
+  private String refundApllyTime = null;
+
+  @JsonProperty("refundSuccesTime")
+  private String refundSuccesTime = null;
+
+  @JsonProperty("coachConfirm")
+  private Integer coachConfirm = null;
+
+  @JsonProperty("studyRange")
+  private Integer studyRange = null;
+
+  @JsonProperty("subStartTime")
+  private String subStartTime = null;
+
+  @JsonProperty("refundReason")
+  private Integer refundReason = null;
+
+  public OrderVO skiType(String skiType) {
+    this.skiType = skiType;
+    return this;
+  }
+
+  /**
+   * 滑板种类
+   * @return skiType
+  **/
+  @ApiModelProperty(value = "滑板种类")
+
+
+  public String getSkiType() {
+    return skiType;
+  }
+
+  public void setSkiType(String skiType) {
+    this.skiType = skiType;
+  }
+
+  public OrderVO action(String action) {
+    this.action = action;
+    return this;
+  }
+
+  /**
+   * 想学的动作
+   * @return action
+  **/
+  @ApiModelProperty(value = "想学的动作")
+
+
+  public String getAction() {
+    return action;
+  }
+
+  public void setAction(String action) {
+    this.action = action;
+  }
+
+  public OrderVO createTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * 不用填
+   * @return createTime
+  **/
+  @ApiModelProperty(value = "不用填")
+
+
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(String createTime) {
+    this.createTime = createTime;
+  }
+
+  public OrderVO stuTel(String stuTel) {
+    this.stuTel = stuTel;
+    return this;
+  }
+
+  /**
+   * 学员联系电话
+   * @return stuTel
+  **/
+  @ApiModelProperty(value = "学员联系电话")
+
+
+  public String getStuTel() {
+    return stuTel;
+  }
+
+  public void setStuTel(String stuTel) {
+    this.stuTel = stuTel;
+  }
+
+  public OrderVO eat(String eat) {
+    this.eat = eat;
+    return this;
+  }
+
+  /**
+   * 0请吃饭 1不请吃饭
+   * @return eat
+  **/
+  @ApiModelProperty(value = "0请吃饭 1不请吃饭")
+
+
+  public String getEat() {
+    return eat;
+  }
+
+  public void setEat(String eat) {
+    this.eat = eat;
+  }
+
+  public OrderVO state(Integer state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * 订单状态
+   * @return state
+  **/
+  @ApiModelProperty(value = "订单状态")
+
+
+  public Integer getState() {
+    return state;
+  }
+
+  public void setState(Integer state) {
+    this.state = state;
+  }
+
+  public OrderVO money(String money) {
+    this.money = money;
+    return this;
+  }
+
+  /**
+   * 数额
+   * @return money
+  **/
+  @ApiModelProperty(value = "数额")
+
+
+  public String getMoney() {
+    return money;
+  }
+
+  public void setMoney(String money) {
+    this.money = money;
+  }
+
+  public OrderVO stuOpenId(String stuOpenId) {
+    this.stuOpenId = stuOpenId;
+    return this;
+  }
+
+  /**
+   * 学员ID
+   * @return stuOpenId
+  **/
+  @ApiModelProperty(value = "学员ID")
+
+
+  public String getStuOpenId() {
+    return stuOpenId;
+  }
+
+  public void setStuOpenId(String stuOpenId) {
+    this.stuOpenId = stuOpenId;
+  }
+
+  public OrderVO coachOpenId(String coachOpenId) {
+    this.coachOpenId = coachOpenId;
+    return this;
+  }
+
+  /**
+   * 教练ID
+   * @return coachOpenId
+  **/
+  @ApiModelProperty(value = "教练ID")
+
+
+  public String getCoachOpenId() {
+    return coachOpenId;
+  }
+
+  public void setCoachOpenId(String coachOpenId) {
+    this.coachOpenId = coachOpenId;
+  }
+
+  public OrderVO fieldId(Integer fieldId) {
+    this.fieldId = fieldId;
+    return this;
+  }
+
+  /**
+   * 滑雪场ID
+   * @return fieldId
+  **/
+  @ApiModelProperty(value = "滑雪场ID")
+
+
+  public Integer getFieldId() {
+    return fieldId;
+  }
+
+  public void setFieldId(Integer fieldId) {
+    this.fieldId = fieldId;
+  }
+
+  public OrderVO avataUrl(String avataUrl) {
+    this.avataUrl = avataUrl;
+    return this;
+  }
+
+  /**
+   * 头像地址
+   * @return avataUrl
+  **/
+  @ApiModelProperty(value = "头像地址")
+
+
+  public String getAvataUrl() {
+    return avataUrl;
+  }
+
+  public void setAvataUrl(String avataUrl) {
+    this.avataUrl = avataUrl;
+  }
+
+  public OrderVO fieldName(String fieldName) {
+    this.fieldName = fieldName;
+    return this;
+  }
+
+  /**
+   * 滑雪场名字
+   * @return fieldName
+  **/
+  @ApiModelProperty(value = "滑雪场名字")
+
+
+  public String getFieldName() {
+    return fieldName;
+  }
+
+  public void setFieldName(String fieldName) {
+    this.fieldName = fieldName;
+  }
+
+  public OrderVO singLevel(String singLevel) {
+    this.singLevel = singLevel;
+    return this;
+  }
+
+  /**
+   * 滑雪水平
+   * @return singLevel
+  **/
+  @ApiModelProperty(value = "滑雪水平")
+
+
+  public String getSingLevel() {
+    return singLevel;
+  }
+
+  public void setSingLevel(String singLevel) {
+    this.singLevel = singLevel;
+  }
+
+  public OrderVO orderId(String orderId) {
+    this.orderId = orderId;
+    return this;
+  }
+
+  /**
+   * 订单id
+   * @return orderId
+  **/
+  @ApiModelProperty(value = "订单id")
+
+
+  public String getOrderId() {
+    return orderId;
+  }
+
+  public void setOrderId(String orderId) {
+    this.orderId = orderId;
+  }
+
+  public OrderVO nickName(String nickName) {
+    this.nickName = nickName;
+    return this;
+  }
+
+  /**
+   * 学员昵称
+   * @return nickName
+  **/
+  @ApiModelProperty(value = "学员昵称")
+
+
+  public String getNickName() {
+    return nickName;
+  }
+
+  public void setNickName(String nickName) {
+    this.nickName = nickName;
+  }
+
+  public OrderVO gender(String gender) {
+    this.gender = gender;
+    return this;
+  }
+
+  /**
+   * 性别
+   * @return gender
+  **/
+  @ApiModelProperty(value = "性别")
+
+
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  public OrderVO refundApllyTime(String refundApllyTime) {
+    this.refundApllyTime = refundApllyTime;
+    return this;
+  }
+
+  /**
+   * 退款申请时间
+   * @return refundApllyTime
+  **/
+  @ApiModelProperty(value = "退款申请时间")
+
+
+  public String getRefundApllyTime() {
+    return refundApllyTime;
+  }
+
+  public void setRefundApllyTime(String refundApllyTime) {
+    this.refundApllyTime = refundApllyTime;
+  }
+
+  public OrderVO refundSuccesTime(String refundSuccesTime) {
+    this.refundSuccesTime = refundSuccesTime;
+    return this;
+  }
+
+  /**
+   * 退款成功
+   * @return refundSuccesTime
+  **/
+  @ApiModelProperty(value = "退款成功")
+
+
+  public String getRefundSuccesTime() {
+    return refundSuccesTime;
+  }
+
+  public void setRefundSuccesTime(String refundSuccesTime) {
+    this.refundSuccesTime = refundSuccesTime;
+  }
+
+  public OrderVO coachConfirm(Integer coachConfirm) {
+    this.coachConfirm = coachConfirm;
+    return this;
+  }
+
+  /**
+   * 教练是否确认
+   * @return coachConfirm
+  **/
+  @ApiModelProperty(value = "教练是否确认")
+
+
+  public Integer getCoachConfirm() {
+    return coachConfirm;
+  }
+
+  public void setCoachConfirm(Integer coachConfirm) {
+    this.coachConfirm = coachConfirm;
+  }
+
+  public OrderVO studyRange(Integer studyRange) {
+    this.studyRange = studyRange;
+    return this;
+  }
+
+  /**
+   * 学习时长
+   * @return studyRange
+  **/
+  @ApiModelProperty(value = "学习时长")
+
+
+  public Integer getStudyRange() {
+    return studyRange;
+  }
+
+  public void setStudyRange(Integer studyRange) {
+    this.studyRange = studyRange;
+  }
+
+  public OrderVO subStartTime(String subStartTime) {
+    this.subStartTime = subStartTime;
+    return this;
+  }
+
+  /**
+   * 预约学习开始时间
+   * @return subStartTime
+  **/
+  @ApiModelProperty(value = "预约学习开始时间")
+
+
+  public String getSubStartTime() {
+    return subStartTime;
+  }
+
+  public void setSubStartTime(String subStartTime) {
+    this.subStartTime = subStartTime;
+  }
+
+  public OrderVO refundReason(Integer refundReason) {
+    this.refundReason = refundReason;
+    return this;
+  }
+
+  /**
+   * 退款原因
+   * @return refundReason
+  **/
+  @ApiModelProperty(value = "退款原因")
+
+
+  public Integer getRefundReason() {
+    return refundReason;
+  }
+
+  public void setRefundReason(Integer refundReason) {
+    this.refundReason = refundReason;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    OrderVO orderVO = (OrderVO) o;
+    return Objects.equals(this.skiType, orderVO.skiType) &&
+        Objects.equals(this.action, orderVO.action) &&
+        Objects.equals(this.createTime, orderVO.createTime) &&
+        Objects.equals(this.stuTel, orderVO.stuTel) &&
+        Objects.equals(this.eat, orderVO.eat) &&
+        Objects.equals(this.state, orderVO.state) &&
+        Objects.equals(this.money, orderVO.money) &&
+        Objects.equals(this.stuOpenId, orderVO.stuOpenId) &&
+        Objects.equals(this.coachOpenId, orderVO.coachOpenId) &&
+        Objects.equals(this.fieldId, orderVO.fieldId) &&
+        Objects.equals(this.avataUrl, orderVO.avataUrl) &&
+        Objects.equals(this.fieldName, orderVO.fieldName) &&
+        Objects.equals(this.singLevel, orderVO.singLevel) &&
+        Objects.equals(this.orderId, orderVO.orderId) &&
+        Objects.equals(this.nickName, orderVO.nickName) &&
+        Objects.equals(this.gender, orderVO.gender) &&
+        Objects.equals(this.refundApllyTime, orderVO.refundApllyTime) &&
+        Objects.equals(this.refundSuccesTime, orderVO.refundSuccesTime) &&
+        Objects.equals(this.coachConfirm, orderVO.coachConfirm) &&
+        Objects.equals(this.studyRange, orderVO.studyRange) &&
+        Objects.equals(this.subStartTime, orderVO.subStartTime) &&
+        Objects.equals(this.refundReason, orderVO.refundReason);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(skiType, action, createTime, stuTel, eat, state, money, stuOpenId, coachOpenId, fieldId, avataUrl, fieldName, singLevel, orderId, nickName, gender, refundApllyTime, refundSuccesTime, coachConfirm, studyRange, subStartTime, refundReason);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class OrderVO {\n");
+    
+    sb.append("    skiType: ").append(toIndentedString(skiType)).append("\n");
+    sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
+    sb.append("    stuTel: ").append(toIndentedString(stuTel)).append("\n");
+    sb.append("    eat: ").append(toIndentedString(eat)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    money: ").append(toIndentedString(money)).append("\n");
+    sb.append("    stuOpenId: ").append(toIndentedString(stuOpenId)).append("\n");
+    sb.append("    coachOpenId: ").append(toIndentedString(coachOpenId)).append("\n");
+    sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
+    sb.append("    avataUrl: ").append(toIndentedString(avataUrl)).append("\n");
+    sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
+    sb.append("    singLevel: ").append(toIndentedString(singLevel)).append("\n");
+    sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
+    sb.append("    nickName: ").append(toIndentedString(nickName)).append("\n");
+    sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
+    sb.append("    refundApllyTime: ").append(toIndentedString(refundApllyTime)).append("\n");
+    sb.append("    refundSuccesTime: ").append(toIndentedString(refundSuccesTime)).append("\n");
+    sb.append("    coachConfirm: ").append(toIndentedString(coachConfirm)).append("\n");
+    sb.append("    studyRange: ").append(toIndentedString(studyRange)).append("\n");
+    sb.append("    subStartTime: ").append(toIndentedString(subStartTime)).append("\n");
+    sb.append("    refundReason: ").append(toIndentedString(refundReason)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

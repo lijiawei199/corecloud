@@ -1,0 +1,90 @@
+package com.bananalab.corecloud.api;
+
+import com.bananalab.corecloud.api.model.Brandlist;
+import com.bananalab.corecloud.api.model.Equiplist;
+import com.bananalab.corecloud.api.model.Flowtop5;
+import com.bananalab.corecloud.api.model.Flowtrend;
+import com.bananalab.corecloud.api.model.Flowview;
+import com.bananalab.corecloud.api.model.Formatdistri;
+import com.bananalab.corecloud.api.model.Formatratio;
+import com.bananalab.corecloud.api.model.Kpitrend;
+import com.bananalab.corecloud.api.model.Kpiview;
+import com.bananalab.corecloud.api.model.Marketflowcompare;
+import com.bananalab.corecloud.api.model.Storetflowcompare;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link DataApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:30:40.698+08:00")
+
+public interface DataApiDelegate {
+
+    /**
+     * @see DataApi#brandlist
+     */
+    ResponseEntity<Brandlist> brandlist( String  format,
+         String  floor,
+         Integer  page);
+
+    /**
+     * @see DataApi#flowtop5
+     */
+    ResponseEntity<Flowtop5> flowtop5();
+
+    /**
+     * @see DataApi#flowtrend
+     */
+    ResponseEntity<Flowtrend> flowtrend( Integer  timerange);
+
+    /**
+     * @see DataApi#flowview
+     */
+    ResponseEntity<Flowview> flowview();
+
+    /**
+     * @see DataApi#formatdistri
+     */
+    ResponseEntity<Formatdistri> formatdistri();
+
+    /**
+     * @see DataApi#formatratio
+     */
+    ResponseEntity<Formatratio> formatratio();
+
+    /**
+     * @see DataApi#kpitrend
+     */
+    ResponseEntity<Kpitrend> kpitrend();
+
+    /**
+     * @see DataApi#kpiview
+     */
+    ResponseEntity<Kpiview> kpiview( String  _this,
+         String  last);
+
+    /**
+     * @see DataApi#marketflowcompare
+     */
+    ResponseEntity<Marketflowcompare> marketflowcompare( String  startDate,
+         String  startTime);
+
+    /**
+     * @see DataApi#nownotify
+     */
+    ResponseEntity<Equiplist> nownotify();
+
+    /**
+     * @see DataApi#storetflowcompare
+     */
+    ResponseEntity<Storetflowcompare> storetflowcompare( String  floor,
+         String  renge,
+         String  date);
+
+}

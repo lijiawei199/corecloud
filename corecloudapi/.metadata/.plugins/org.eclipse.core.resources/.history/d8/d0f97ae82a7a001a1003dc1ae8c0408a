@@ -1,0 +1,130 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.bananalab.snow.api.model.OrderVO;
+import com.bananalab.snow.api.model.WithdrawVO;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * DealflowData
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class DealflowData   {
+  @JsonProperty("withdrawList")
+  @Valid
+  private List<WithdrawVO> withdrawList = null;
+
+  @JsonProperty("orderList")
+  @Valid
+  private List<OrderVO> orderList = null;
+
+  public DealflowData withdrawList(List<WithdrawVO> withdrawList) {
+    this.withdrawList = withdrawList;
+    return this;
+  }
+
+  public DealflowData addWithdrawListItem(WithdrawVO withdrawListItem) {
+    if (this.withdrawList == null) {
+      this.withdrawList = new ArrayList<WithdrawVO>();
+    }
+    this.withdrawList.add(withdrawListItem);
+    return this;
+  }
+
+  /**
+   * Get withdrawList
+   * @return withdrawList
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public List<WithdrawVO> getWithdrawList() {
+    return withdrawList;
+  }
+
+  public void setWithdrawList(List<WithdrawVO> withdrawList) {
+    this.withdrawList = withdrawList;
+  }
+
+  public DealflowData orderList(List<OrderVO> orderList) {
+    this.orderList = orderList;
+    return this;
+  }
+
+  public DealflowData addOrderListItem(OrderVO orderListItem) {
+    if (this.orderList == null) {
+      this.orderList = new ArrayList<OrderVO>();
+    }
+    this.orderList.add(orderListItem);
+    return this;
+  }
+
+  /**
+   * Get orderList
+   * @return orderList
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public List<OrderVO> getOrderList() {
+    return orderList;
+  }
+
+  public void setOrderList(List<OrderVO> orderList) {
+    this.orderList = orderList;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    DealflowData dealflowData = (DealflowData) o;
+    return Objects.equals(this.withdrawList, dealflowData.withdrawList) &&
+        Objects.equals(this.orderList, dealflowData.orderList);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(withdrawList, orderList);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class DealflowData {\n");
+    
+    sb.append("    withdrawList: ").append(toIndentedString(withdrawList)).append("\n");
+    sb.append("    orderList: ").append(toIndentedString(orderList)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

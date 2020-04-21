@@ -1,0 +1,36 @@
+package com.bananalab.corecloud.api;
+
+import com.bananalab.corecloud.api.model.BaseVO;
+import com.bananalab.corecloud.api.model.FileUploadVOInfo;
+import org.springframework.core.io.Resource;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link CommonApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-21T11:23:54.562+08:00")
+
+public interface CommonApiDelegate {
+
+    /**
+     * @see CommonApi#sendvcode
+     */
+    ResponseEntity<BaseVO> sendvcode( String  phone);
+
+    /**
+     * @see CommonApi#uploadByteFile
+     */
+    ResponseEntity<FileUploadVOInfo> uploadByteFile( byte[]  file);
+
+    /**
+     * @see CommonApi#uploadFile
+     */
+    ResponseEntity<FileUploadVOInfo> uploadFile(MultipartFile file);
+
+}

@@ -1,0 +1,47 @@
+package com.bananalab.corecloud.api;
+
+import com.bananalab.corecloud.api.model.BaseVO;
+import com.bananalab.corecloud.api.model.FileUploadVOInfo;
+import org.springframework.core.io.Resource;
+import io.swagger.annotations.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.validation.constraints.*;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-21T11:23:54.562+08:00")
+
+@Controller
+@RequestMapping("${openapi.Qpk API.base-path:/market}")
+public class CommonApiController implements CommonApi {
+
+    private final CommonApiDelegate delegate;
+
+    public CommonApiController(@org.springframework.beans.factory.annotation.Autowired(required = false) CommonApiDelegate delegate) {
+        this.delegate = delegate;
+    }
+
+    public ResponseEntity<BaseVO> sendvcode(@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "phone", required = true) String phone) {
+        return delegate.sendvcode(phone);
+    }
+
+    public ResponseEntity<FileUploadVOInfo> uploadByteFile(@ApiParam(value = ""  )  @Valid @RequestBody byte[] file) {
+        return delegate.uploadByteFile(file);
+    }
+
+    public ResponseEntity<FileUploadVOInfo> uploadFile(@ApiParam(value = "file detail") @Valid @RequestPart("file") MultipartFile file) {
+        return delegate.uploadFile(file);
+    }
+
+}

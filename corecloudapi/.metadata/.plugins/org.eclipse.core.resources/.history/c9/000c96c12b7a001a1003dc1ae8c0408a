@@ -1,0 +1,59 @@
+package com.bananalab.corecloud.api;
+
+import com.bananalab.corecloud.api.model.LeaseTime;
+import com.bananalab.corecloud.api.model.Potcustlist;
+import com.bananalab.corecloud.api.model.Ranklist;
+import com.bananalab.corecloud.api.model.Storedetails;
+import com.bananalab.corecloud.api.model.Translist;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link StoreApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:30:40.698+08:00")
+
+public interface StoreApiDelegate {
+
+    /**
+     * @see StoreApi#leaseTime
+     */
+    ResponseEntity<LeaseTime> leaseTime( Integer  floor);
+
+    /**
+     * @see StoreApi#potcustlist
+     */
+    ResponseEntity<Potcustlist> potcustlist( String  fid);
+
+    /**
+     * @see StoreApi#ranklist
+     */
+    ResponseEntity<Ranklist> ranklist( String  priority,
+         String  time);
+
+    /**
+     * @see StoreApi#rent
+     */
+    ResponseEntity<LeaseTime> rent( Integer  floor);
+
+    /**
+     * @see StoreApi#storedetails
+     */
+    ResponseEntity<Storedetails> storedetails( String  fid);
+
+    /**
+     * @see StoreApi#storeuser
+     */
+    ResponseEntity<LeaseTime> storeuser( Integer  floor);
+
+    /**
+     * @see StoreApi#translist
+     */
+    ResponseEntity<Translist> translist( String  time);
+
+}

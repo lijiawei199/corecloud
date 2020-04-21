@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bananalab.corecloud.mybatis.mapper.GuardMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bananalab.corecloud.mybatis.model.Guard">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="route" property="route" />
+        <result column="shift_time" property="shiftTime" />
+        <result column="route_name" property="routeName" />
+        <result column="floor" property="floor" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, route, shift_time, route_name, floor
+    </sql>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bananalab.corecloud.mybatis.mapper.PotentialCustMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bananalab.corecloud.mybatis.model.PotentialCust">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="tel" property="tel" />
+        <result column="origin" property="origin" />
+        <result column="busy_cat" property="busyCat" />
+        <result column="brand" property="brand" />
+        <result column="offer" property="offer" />
+        <result column="fid" property="fid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, tel, origin, busy_cat, brand, offer, fid
+    </sql>
+
+</mapper>

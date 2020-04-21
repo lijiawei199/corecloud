@@ -1,0 +1,181 @@
+package com.bananalab.corecloud.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * IndexVOSale
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-17T11:27:28.087+08:00")
+
+public class IndexVOSale   {
+  @JsonProperty("sameMonth")
+  private String sameMonth = null;
+
+  @JsonProperty("lastMonth")
+  private String lastMonth = null;
+
+  @JsonProperty("lastyear")
+  private Integer lastyear = null;
+
+  @JsonProperty("monthCompare")
+  private String monthCompare = null;
+
+  @JsonProperty("yearCompare")
+  private String yearCompare = null;
+
+  public IndexVOSale sameMonth(String sameMonth) {
+    this.sameMonth = sameMonth;
+    return this;
+  }
+
+  /**
+   * Get sameMonth
+   * @return sameMonth
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getSameMonth() {
+    return sameMonth;
+  }
+
+  public void setSameMonth(String sameMonth) {
+    this.sameMonth = sameMonth;
+  }
+
+  public IndexVOSale lastMonth(String lastMonth) {
+    this.lastMonth = lastMonth;
+    return this;
+  }
+
+  /**
+   * Get lastMonth
+   * @return lastMonth
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getLastMonth() {
+    return lastMonth;
+  }
+
+  public void setLastMonth(String lastMonth) {
+    this.lastMonth = lastMonth;
+  }
+
+  public IndexVOSale lastyear(Integer lastyear) {
+    this.lastyear = lastyear;
+    return this;
+  }
+
+  /**
+   * Get lastyear
+   * @return lastyear
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getLastyear() {
+    return lastyear;
+  }
+
+  public void setLastyear(Integer lastyear) {
+    this.lastyear = lastyear;
+  }
+
+  public IndexVOSale monthCompare(String monthCompare) {
+    this.monthCompare = monthCompare;
+    return this;
+  }
+
+  /**
+   * Get monthCompare
+   * @return monthCompare
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getMonthCompare() {
+    return monthCompare;
+  }
+
+  public void setMonthCompare(String monthCompare) {
+    this.monthCompare = monthCompare;
+  }
+
+  public IndexVOSale yearCompare(String yearCompare) {
+    this.yearCompare = yearCompare;
+    return this;
+  }
+
+  /**
+   * Get yearCompare
+   * @return yearCompare
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getYearCompare() {
+    return yearCompare;
+  }
+
+  public void setYearCompare(String yearCompare) {
+    this.yearCompare = yearCompare;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    IndexVOSale indexVOSale = (IndexVOSale) o;
+    return Objects.equals(this.sameMonth, indexVOSale.sameMonth) &&
+        Objects.equals(this.lastMonth, indexVOSale.lastMonth) &&
+        Objects.equals(this.lastyear, indexVOSale.lastyear) &&
+        Objects.equals(this.monthCompare, indexVOSale.monthCompare) &&
+        Objects.equals(this.yearCompare, indexVOSale.yearCompare);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(sameMonth, lastMonth, lastyear, monthCompare, yearCompare);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class IndexVOSale {\n");
+    
+    sb.append("    sameMonth: ").append(toIndentedString(sameMonth)).append("\n");
+    sb.append("    lastMonth: ").append(toIndentedString(lastMonth)).append("\n");
+    sb.append("    lastyear: ").append(toIndentedString(lastyear)).append("\n");
+    sb.append("    monthCompare: ").append(toIndentedString(monthCompare)).append("\n");
+    sb.append("    yearCompare: ").append(toIndentedString(yearCompare)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

@@ -1,0 +1,1041 @@
+---
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: "雪帝滑雪Restful API?"
+host: www.sonmarket.com
+schemes: [http, https]
+produces:
+  - application/json
+basePath: /snow
+parameters:
+  token:
+    name: token
+    type: string
+    in: header
+    required: true
+paths:
+  /login:
+    get:
+      tags:
+        - 登录注册
+      description: 登录
+      operationId: login
+      parameters:
+        - name: openId
+          type: string
+          in: query
+          description: openId
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: login
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: "#/definitions/tokenVO"
+  
+  
+  
+  /regist/snowinfo:
+    post:
+      tags:
+        - 登录注册
+      description: 滑雪信息录入
+      operationId: snowinfo
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: user
+          in: body
+          description: user
+          schema:
+            $ref: "#/definitions/userVO"
+        
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"     
+  
+  /regist/wxinfo:
+    post:
+      tags:
+        - 登录注册
+      description: 微信信息录入
+      operationId: wxinfo
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: user
+          in: body
+          description: user
+          schema:
+            $ref: "#/definitions/userVO"
+        
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  
+  /regist/wx:
+    get:
+      tags:
+        - 登录注册
+      description: 微信注册
+      operationId: wxRegist
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: code
+          type: string
+          in: query
+          description: code
+        
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"       
+                
+  /fields:
+    get:
+      tags:
+        - 滑雪场
+      description: 滑雪场
+      operationId: fields
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: region
+          type: string
+          in: query
+          required: true  
+          
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: fieldlist
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items: 
+                 $ref: "#/definitions/fieldVO"    
+  /fields/search:
+    get:
+      tags:
+        - 滑雪场
+      description: 搜索滑雪场
+      operationId: searchfield
+      parameters:
+        - name: fieldName
+          type: string
+          in: query
+          description: region
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: fieldlist
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/fieldVO" 
+  
+  /fields/addstar:
+    get:
+      tags:
+        - 滑雪场
+      description: 点击收藏
+      operationId: addstar
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: fieldId
+          type: string
+          in: query
+          description: region
+         
+        
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"  
+                 
+  
+  /fields/cancelstar:
+    get:
+      tags:
+        - 滑雪场
+      description: 取消收藏
+      operationId: cancelstar
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: fieldId
+          type: string
+          in: query
+          description: region
+         
+        
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"  
+  
+  
+  /fields/star:
+    get:
+      tags:
+        - 滑雪场
+      description: 用户收藏的滑雪场
+      operationId: fieldStar
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: region
+          type: string
+          in: query
+          description: region
+         
+        
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: fieldlist
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items: 
+                 $ref: "#/definitions/fieldVO"
+                 
+  
+  /user/fileUpload:
+    post:
+      tags:
+        - 用户
+      description: 文件上传
+      operationId: uploadFile
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: file
+          type: file
+          in: formData
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            title: fileUploadVOInfo
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                $ref: "#/definitions/baseVO"
+  
+  /user/userinfo:
+    get:
+      tags:
+        - 用户
+      description: 用户详情
+      operationId: userinfo
+      parameters:
+        - $ref: "#/parameters/token"
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: userinfo
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                 $ref: "#/definitions/userVO" 
+  
+  /user/changeinfo:
+    post:
+      tags:
+        - 用户
+      description: 用户修改个人信息
+      operationId: changeinfo
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: user
+          in: body
+          description: changeinfo
+          schema:
+            $ref: "#/definitions/userVO"
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  
+  /user/remarkorder:
+    post:
+      tags:
+        - 用户
+      description: 用户评价订单
+      operationId: remarkorder
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: remark
+          in: body
+          description: remarkVO
+          schema:
+            $ref: "#/definitions/remarkVO"
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  
+  /user/remarklist:
+    get:
+      tags:
+        - 用户
+      description: 用户收到评价
+      operationId: remarklist
+      parameters:
+        - $ref: "#/parameters/token"
+      responses:
+        200:
+          description: success
+          schema:
+            title: remarklist
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                type: array
+                items: 
+                  $ref: "#/definitions/remarkVO"
+  
+  /user/feedback:
+    post:
+      tags:
+        - 用户
+      description: 用户意见反馈
+      operationId: feedback
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: feedBack
+          in: body
+          description: feedBack
+          schema:
+            $ref: "#/definitions/feedBackVO"
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  
+  
+  
+  /user/msghall:
+    get:
+      tags:
+        - 用户
+      description: 信息列表大厅
+      operationId: msghall
+      parameters:
+        - $ref: "#/parameters/token"
+        
+      responses:
+        200:
+          description: success
+          schema:
+            title: msghall
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/messageVO" 
+                     
+  
+  /user/ordermsglist:
+    get:
+      tags:
+        - 用户
+      description: 订单信息列表 
+      operationId: ordermsglist
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: type
+          in: query
+          description: 消息类型 "退款" 或者 "订单通知"
+          type: string
+      responses:
+        200:
+          description: success
+          schema:
+            title: ordermsglist
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                type: array
+                items: 
+                  $ref: "#/definitions/orderVO"
+  
+  /user/withdrawmsglist:
+    get:
+      tags:
+        - 用户
+      description: 提现信息列表
+      operationId: withdrawmsglist
+      parameters:
+        - $ref: "#/parameters/token"
+      responses:
+        200:
+          description: success
+          schema:
+            title: withdrawmsglist
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                type: array
+                items: 
+                  $ref: "#/definitions/withdrawVO"
+                      
+  
+  /user/dealflow:
+    get:
+      tags:
+        - 用户
+      description: 交易流水
+      operationId: dealflow
+      parameters:
+        - $ref: "#/parameters/token"
+      responses:
+        200:
+          description: success
+          schema:
+            title: dealflow
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                type: object
+                properties:
+                  withdrawList:
+                    type: array
+                    items:
+                      $ref: "#/definitions/withdrawVO"
+                  orderList:
+                    type: array
+                    items:
+                      $ref: "#/definitions/orderVO"    
+                  
+                
+  /user/withdrawdetail:
+    get:
+      tags:
+        - 用户
+      description: 提现申请详情
+      operationId: withdrawdetail
+      parameters:
+        - $ref: "#/parameters/token" 
+        - name: withdrawId
+          in: query
+          description: withdrawId
+          type: integer
+        
+      responses:
+        200:
+          description: success
+          schema:
+            title: withdrawdetail
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                $ref: "#/definitions/withdrawVO" 
+                          
+     
+                  
+  
+  /user/withdrawalapply:
+    post:
+      tags:
+        - 用户
+      description: 用户提现申请
+      operationId: withdrawal
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: withdraw
+          in: body
+          description: user
+          schema:
+            $ref: "#/definitions/withdrawVO"
+        
+      responses:
+        200:
+          description: success
+          schema:
+             $ref: "#/definitions/baseVO"
+  
+  /order/detail:
+    get:
+      tags:
+        - 订单
+      description: 订单详情
+      operationId: orderdetail
+      parameters:
+        - name: orderId
+          type: string
+          in: query
+          required: true
+          description: orderId
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: orderdetail
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: "#/definitions/orderVO"
+  
+  /order/orderlist:
+    get:
+      tags:
+        - 订单
+      description: 订单详情
+      operationId: orderlist
+      parameters:
+        - name: stuOpenId
+          type: string
+          in: query
+          description: stuOpenId
+        - name: coachOpenId
+          type: string
+          in: query
+          description: coachOpenId
+        - name: state
+          type: string
+          in: query
+          description: 状态 -1 全部 0未付款 1已付款（等待接单） 2 已接单 3 待确认 4 已完成 5 退款申请中 6退款完成 7 已评价 8 已取消 
+              
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: orderlist
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/orderVO"
+                
+  
+  /order/prepare:
+    post:
+      tags:
+        - 订单
+      description: 订单录入
+      operationId: prepare
+      parameters:
+        - name: order
+          in: body
+          description: order
+          schema:
+            $ref: "#/definitions/orderVO"
+          
+        
+      responses:
+        200:
+          description: success
+          schema:
+              $ref: "#/definitions/baseVO"  
+  
+  
+  
+  /order/wxpay:
+    get:
+      tags:
+        - 订单
+      description: 微信支付
+      operationId: orderwxpay
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: orderId
+          in: query
+          type: string
+      responses:
+        200:
+          description: success
+          schema:
+            title: orderwxpay
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                  $ref: "#/definitions/wxPayVO"  
+  
+  /order/receipt:
+    get:
+      tags:
+        - 订单
+      description: 接单
+      operationId: receipt
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: orderId
+          type: string
+          in: query
+          description: orderId 
+      responses:
+        200:
+          description: success
+          schema:
+             $ref: "#/definitions/baseVO"
+  
+  /order/beginstudy:
+    get:
+      tags:
+        - 订单
+      description: 开始学习
+      operationId: beginstudy
+      parameters:
+        - $ref: "#/parameters/token" 
+        - name: orderId
+          type: string
+          in: query
+          description: orderId  
+      responses:
+        200:
+          description: success
+          schema:
+             $ref: "#/definitions/baseVO"  
+  /order/endstudy:
+    get:
+      tags:
+        - 订单
+      description: 确认学习完成
+      operationId: endstudy
+      parameters:
+       
+        - $ref: "#/parameters/token"
+        - name: orderId
+          type: string
+          in: query
+          description: orderId 
+        
+      responses:
+        200:
+          description: success
+          schema:
+             $ref: "#/definitions/baseVO"  
+  
+  /order/confirm:
+    get:
+      tags:
+        - 订单
+      description: 教练确认
+      operationId: confirm
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: orderId
+          type: string
+          in: query
+          description: orderId 
+          
+      responses:
+        200:
+          description: success
+          schema:
+             $ref: "#/definitions/baseVO"  
+  
+  
+  
+  /order/halllist:
+    get:
+      tags:
+        - 订单
+      description: 大厅订单列表
+      operationId: halllist
+      parameters:
+        - name: skiType
+          type: string
+          in: query
+          description: 0全部 1单板 2双板 
+        - name: money
+          type: string
+          in: query
+          description:  0升序 1降序  
+        - name: gender
+          type: string
+          in: query
+          description:  0全部 1男 2女
+        - name: fieldId
+          type: integer
+          in: query
+          description:  雪场Id  
+        
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: orderlist
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items: 
+                 $ref: "#/definitions/orderVO" 
+                               
+  /order/refund:
+    get:
+      tags:
+        - 订单
+      description: 退款
+      operationId: refund
+      parameters:
+        - $ref: "#/parameters/token"
+        - name: orderId
+          type: string
+          in: query
+          description: orderId 
+        - name: reason
+          type: string
+          in: query
+          description: reason  
+      responses:
+        200:
+          description: success
+          schema:
+             $ref: "#/definitions/baseVO" 
+  
+  /login/isuser:
+    get:
+      tags:
+        - 登录注册
+      description: 判断是否是用户
+      operationId: isuser
+      parameters:
+        - name: openId
+          type: string
+          in: query
+          description: openId
+      responses:
+        200:
+          description: success
+          schema:
+           $ref: "#/definitions/baseVO"
+  
+  
+  
+
+
+
+definitions:
+  baseVO:
+    type: object
+    properties:
+      code:
+        type: integer
+      msg:
+        type: string
+      data:
+        type: string
+  userVO:
+    type: object
+    properties:
+      doubLevel:
+        type: string
+      singLevel:
+        type: string
+      skiType:
+        type: string
+      cardName:
+        type: string
+      bank:
+        type: string
+      cardNum:
+        type: string
+      gender:
+        type: string
+      avataUrl:
+        type: string
+      nickName:
+        type: string
+      siganature:
+        type: string 
+      tel:
+        type: string     
+              
+      
+  tokenVO:
+    type: object
+    properties:
+      token:
+        type: string
+        
+  
+  fieldVO:
+    type: object
+    properties:
+      busyTime:
+        type: string
+      fieldId:
+        type: integer  
+      pos:
+        type: string
+      fieldName:
+        type: string
+      collect:
+        type: boolean  
+           
+  withdrawVO:
+    type: object
+    properties:
+      id:
+        type: integer
+      openId:
+        type: string
+      num:
+        type: string  
+      status:
+        type: integer
+      applyTime:
+        type: string 
+      serviceNum:
+        type: string 
+      feedBack:
+        type: string
+      successTime:
+        type: string
+      cardName:
+        type: string
+      bank:
+        type: string
+      cardNum:
+        type: string      
+      
+           
+         
+  
+  
+  
+  
+  wxPayVO: 
+    type: object
+    properties:
+      star:
+        type: string
+      stuOpenId:
+        type: string  
+      orderId:
+        type: string
+      coachOpenId:
+        type: string
+      coachAvataUrl:
+        type: string
+      coachNickName:
+        type: string
+      remarkTime:
+        type: string
+      gender:
+        type: integer
+      singLevel:
+        type: integer   
+  
+  remarkVO: 
+    type: object
+    properties:
+      star:
+        type: string
+      stuOpenId:
+        type: string  
+      orderId:
+        type: string
+      coachOpenId:
+        type: string
+      coachAvataUrl:
+        type: string
+      coachNickName:
+        type: string
+      remarkTime:
+        type: string
+      gender:
+        type: integer
+      singLevel:
+        type: integer       
+            
+        
+       
+  
+  messageVO:
+    type: object
+    properties:
+      type:
+        type: integer
+      content:
+        type: string
+      orderId:
+        type: string
+      withdrawId:
+        type: integer
+      createTime:
+        type: string  
+              
+  
+  feedBackVO:
+    type: object
+    properties:
+      openId:
+        type: string
+      content:
+        type: string  
+      
+  
+  
+  
+  orderVO:
+    type: object
+    properties:
+      skiType:
+        type: string 
+        description: 滑板种类  
+      action:
+        type: string
+        description: 想学的动作
+      createTime:
+        type: string
+        description: 不用填
+      tel:
+        type: string
+        description: 联系电话
+      eat:
+        type: string
+        description: 0请吃饭 1不请吃饭
+      state:
+        type: integer
+        description: 订单状态
+      money:
+        type: string
+        description: 数额
+      stuOpenId:
+        type: string
+        description: 学员ID
+      coachOpenId:
+        type: string
+        description: 教练ID
+      fieldId:
+        type: integer
+        description: 滑雪场ID 
+      avataUrl:
+        type: string
+        description: 头像地址 
+      fieldName:
+        type: string
+        description: 滑雪场名字 
+      singLevel:
+        type: string
+        description: 滑雪水平
+      orderId:
+        type: string
+        description: 订单id
+      nickName: 
+        type: string
+        description: 学员昵称
+      gender: 
+        type: string
+        description: 性别
+      refundApllyTime: 
+        type: string
+        description: 退款申请时间
+      refundSuccesTime: 
+        type: string
+        description: 退款成功
+      coachConfirm: 
+        type: integer
+        description: 教练是否确认
+      studyRange: 
+        type: integer
+        description: 学习时长
+      subStartTime: 
+        type: string
+        description: 预约学习开始时间    
+          
+      
+            
+          
+        
+             
+      
+            
+         
+                     
+         
+
+  
+  
+        
+                
+
+

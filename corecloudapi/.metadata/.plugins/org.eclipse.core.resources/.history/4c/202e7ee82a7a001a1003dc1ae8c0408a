@@ -1,0 +1,356 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * WithdrawVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class WithdrawVO   {
+  @JsonProperty("id")
+  private Integer id = null;
+
+  @JsonProperty("openId")
+  private String openId = null;
+
+  @JsonProperty("num")
+  private String num = null;
+
+  @JsonProperty("serviceNum")
+  private String serviceNum = null;
+
+  @JsonProperty("realNum")
+  private String realNum = null;
+
+  @JsonProperty("status")
+  private Integer status = null;
+
+  @JsonProperty("applyTime")
+  private String applyTime = null;
+
+  @JsonProperty("feedBack")
+  private String feedBack = null;
+
+  @JsonProperty("successTime")
+  private String successTime = null;
+
+  @JsonProperty("cardName")
+  private String cardName = null;
+
+  @JsonProperty("bank")
+  private String bank = null;
+
+  @JsonProperty("cardNum")
+  private String cardNum = null;
+
+  public WithdrawVO id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Get id
+   * @return id
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public WithdrawVO openId(String openId) {
+    this.openId = openId;
+    return this;
+  }
+
+  /**
+   * Get openId
+   * @return openId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getOpenId() {
+    return openId;
+  }
+
+  public void setOpenId(String openId) {
+    this.openId = openId;
+  }
+
+  public WithdrawVO num(String num) {
+    this.num = num;
+    return this;
+  }
+
+  /**
+   * 申请金额
+   * @return num
+  **/
+  @ApiModelProperty(value = "申请金额")
+
+
+  public String getNum() {
+    return num;
+  }
+
+  public void setNum(String num) {
+    this.num = num;
+  }
+
+  public WithdrawVO serviceNum(String serviceNum) {
+    this.serviceNum = serviceNum;
+    return this;
+  }
+
+  /**
+   * 服务费 10%
+   * @return serviceNum
+  **/
+  @ApiModelProperty(value = "服务费 10%")
+
+
+  public String getServiceNum() {
+    return serviceNum;
+  }
+
+  public void setServiceNum(String serviceNum) {
+    this.serviceNum = serviceNum;
+  }
+
+  public WithdrawVO realNum(String realNum) {
+    this.realNum = realNum;
+    return this;
+  }
+
+  /**
+   * 实际提现金额
+   * @return realNum
+  **/
+  @ApiModelProperty(value = "实际提现金额")
+
+
+  public String getRealNum() {
+    return realNum;
+  }
+
+  public void setRealNum(String realNum) {
+    this.realNum = realNum;
+  }
+
+  public WithdrawVO status(Integer status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   * @return status
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getStatus() {
+    return status;
+  }
+
+  public void setStatus(Integer status) {
+    this.status = status;
+  }
+
+  public WithdrawVO applyTime(String applyTime) {
+    this.applyTime = applyTime;
+    return this;
+  }
+
+  /**
+   * Get applyTime
+   * @return applyTime
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getApplyTime() {
+    return applyTime;
+  }
+
+  public void setApplyTime(String applyTime) {
+    this.applyTime = applyTime;
+  }
+
+  public WithdrawVO feedBack(String feedBack) {
+    this.feedBack = feedBack;
+    return this;
+  }
+
+  /**
+   * Get feedBack
+   * @return feedBack
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getFeedBack() {
+    return feedBack;
+  }
+
+  public void setFeedBack(String feedBack) {
+    this.feedBack = feedBack;
+  }
+
+  public WithdrawVO successTime(String successTime) {
+    this.successTime = successTime;
+    return this;
+  }
+
+  /**
+   * Get successTime
+   * @return successTime
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getSuccessTime() {
+    return successTime;
+  }
+
+  public void setSuccessTime(String successTime) {
+    this.successTime = successTime;
+  }
+
+  public WithdrawVO cardName(String cardName) {
+    this.cardName = cardName;
+    return this;
+  }
+
+  /**
+   * Get cardName
+   * @return cardName
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCardName() {
+    return cardName;
+  }
+
+  public void setCardName(String cardName) {
+    this.cardName = cardName;
+  }
+
+  public WithdrawVO bank(String bank) {
+    this.bank = bank;
+    return this;
+  }
+
+  /**
+   * Get bank
+   * @return bank
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getBank() {
+    return bank;
+  }
+
+  public void setBank(String bank) {
+    this.bank = bank;
+  }
+
+  public WithdrawVO cardNum(String cardNum) {
+    this.cardNum = cardNum;
+    return this;
+  }
+
+  /**
+   * Get cardNum
+   * @return cardNum
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCardNum() {
+    return cardNum;
+  }
+
+  public void setCardNum(String cardNum) {
+    this.cardNum = cardNum;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    WithdrawVO withdrawVO = (WithdrawVO) o;
+    return Objects.equals(this.id, withdrawVO.id) &&
+        Objects.equals(this.openId, withdrawVO.openId) &&
+        Objects.equals(this.num, withdrawVO.num) &&
+        Objects.equals(this.serviceNum, withdrawVO.serviceNum) &&
+        Objects.equals(this.realNum, withdrawVO.realNum) &&
+        Objects.equals(this.status, withdrawVO.status) &&
+        Objects.equals(this.applyTime, withdrawVO.applyTime) &&
+        Objects.equals(this.feedBack, withdrawVO.feedBack) &&
+        Objects.equals(this.successTime, withdrawVO.successTime) &&
+        Objects.equals(this.cardName, withdrawVO.cardName) &&
+        Objects.equals(this.bank, withdrawVO.bank) &&
+        Objects.equals(this.cardNum, withdrawVO.cardNum);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, openId, num, serviceNum, realNum, status, applyTime, feedBack, successTime, cardName, bank, cardNum);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class WithdrawVO {\n");
+    
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    openId: ").append(toIndentedString(openId)).append("\n");
+    sb.append("    num: ").append(toIndentedString(num)).append("\n");
+    sb.append("    serviceNum: ").append(toIndentedString(serviceNum)).append("\n");
+    sb.append("    realNum: ").append(toIndentedString(realNum)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    applyTime: ").append(toIndentedString(applyTime)).append("\n");
+    sb.append("    feedBack: ").append(toIndentedString(feedBack)).append("\n");
+    sb.append("    successTime: ").append(toIndentedString(successTime)).append("\n");
+    sb.append("    cardName: ").append(toIndentedString(cardName)).append("\n");
+    sb.append("    bank: ").append(toIndentedString(bank)).append("\n");
+    sb.append("    cardNum: ").append(toIndentedString(cardNum)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

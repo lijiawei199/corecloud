@@ -1,0 +1,32 @@
+apply plugin: 'java'
+
+repositories {
+    maven {
+        url "http://maven.reprezen.com/repository/releases/"
+    }
+    maven {
+        url "http://maven.reprezen.com/repository/eclipse/"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile('com.modelsolv.reprezen:com.modelsolv.reprezen.generators.api:1.5.15.7232')
+    compile('com.modelsolv.reprezen:com.modelsolv.reprezen.generators.xtend:1.5.15.7232') {
+        exclude module: 'org.eclipse.equinox.bidi'
+        exclude module: 'org.eclipse.emf.common.ui'
+        exclude module: 'org.eclipse.e4.ui.workbench3'
+        exclude module: 'org.apache.batik.css'
+        exclude module: 'org.eclipse.e4.ui.css.swt'
+    }
+    compile('com.modelsolv.reprezen:com.modelsolv.reprezen.generators.standard:1.5.15.7232')
+    compile fileTree(dir: 'C:\Users\outiejun\RepreZen\workspace/shared/GenTemplates', include: ['*.jar'])
+}
+
+task(execGenTarget, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.modelsolv.reprezen.generators.api.GeneratorLauncher'
+    classpath = sourceSets.main.runtimeClasspath
+    args '/yjzlapi/gentargets/app/Javascript/Javascript.gen'
+}
+
+defaultTasks 'execGenTarget' 

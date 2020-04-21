@@ -1,0 +1,113 @@
+package com.bananalab.snow.api;
+
+import com.bananalab.snow.api.model.BaseVO;
+import com.bananalab.snow.api.model.Dealflow;
+import com.bananalab.snow.api.model.FeedBackVO;
+import com.bananalab.snow.api.model.FileUploadVOInfo;
+import java.util.List;
+import com.bananalab.snow.api.model.MessageVO;
+import com.bananalab.snow.api.model.Msghall;
+import com.bananalab.snow.api.model.Ordermsglist;
+import com.bananalab.snow.api.model.Phone;
+import com.bananalab.snow.api.model.RemarkVO;
+import com.bananalab.snow.api.model.Remarklist;
+import org.springframework.core.io.Resource;
+import com.bananalab.snow.api.model.UserVO;
+import com.bananalab.snow.api.model.Userinfo;
+import com.bananalab.snow.api.model.WithdrawVO;
+import com.bananalab.snow.api.model.Withdrawdetail;
+import com.bananalab.snow.api.model.Withdrawmsglist;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link UserApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public interface UserApiDelegate {
+
+    /**
+     * @see UserApi#bindPhone
+     */
+    ResponseEntity<BaseVO> bindPhone( String  token,
+         Phone  phone);
+
+    /**
+     * @see UserApi#changeinfo
+     */
+    ResponseEntity<BaseVO> changeinfo( String  token,
+         UserVO  user);
+
+    /**
+     * @see UserApi#dealflow
+     */
+    ResponseEntity<Dealflow> dealflow( String  token);
+
+    /**
+     * @see UserApi#feedback
+     */
+    ResponseEntity<BaseVO> feedback( String  token,
+         FeedBackVO  feedBack);
+
+    /**
+     * @see UserApi#msghall
+     */
+    ResponseEntity<Msghall> msghall( String  token);
+
+    /**
+     * @see UserApi#ordermsglist
+     */
+    ResponseEntity<Ordermsglist> ordermsglist( String  token,
+         String  type);
+
+    /**
+     * @see UserApi#readmsg
+     */
+    ResponseEntity<BaseVO> readmsg( String  token,
+         List<MessageVO>  msglist);
+
+    /**
+     * @see UserApi#remarklist
+     */
+    ResponseEntity<Remarklist> remarklist( String  token);
+
+    /**
+     * @see UserApi#remarkorder
+     */
+    ResponseEntity<BaseVO> remarkorder( String  token,
+         RemarkVO  remark);
+
+    /**
+     * @see UserApi#uploadFile
+     */
+    ResponseEntity<FileUploadVOInfo> uploadFile(MultipartFile file);
+
+    /**
+     * @see UserApi#userinfo
+     */
+    ResponseEntity<Userinfo> userinfo( String  token);
+
+    /**
+     * @see UserApi#withdrawal
+     */
+    ResponseEntity<BaseVO> withdrawal( String  token,
+         WithdrawVO  withdraw);
+
+    /**
+     * @see UserApi#withdrawdetail
+     */
+    ResponseEntity<Withdrawdetail> withdrawdetail( String  token,
+         Integer  withdrawId);
+
+    /**
+     * @see UserApi#withdrawmsglist
+     */
+    ResponseEntity<Withdrawmsglist> withdrawmsglist( String  token);
+
+}

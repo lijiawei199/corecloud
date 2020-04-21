@@ -1,0 +1,406 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * UserVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class UserVO   {
+  @JsonProperty("doubLevel")
+  private String doubLevel = null;
+
+  @JsonProperty("singLevel")
+  private Integer singLevel = null;
+
+  @JsonProperty("skiType")
+  private String skiType = null;
+
+  @JsonProperty("cardName")
+  private String cardName = null;
+
+  @JsonProperty("bank")
+  private String bank = null;
+
+  @JsonProperty("cardNum")
+  private String cardNum = null;
+
+  @JsonProperty("gender")
+  private Integer gender = null;
+
+  @JsonProperty("avataUrl")
+  private String avataUrl = null;
+
+  @JsonProperty("nickName")
+  private String nickName = null;
+
+  @JsonProperty("siganature")
+  private String siganature = null;
+
+  @JsonProperty("tel")
+  private String tel = null;
+
+  @JsonProperty("account")
+  private String account = null;
+
+  @JsonProperty("openId")
+  private String openId = null;
+
+  @JsonProperty("freezAmount")
+  private String freezAmount = null;
+
+  public UserVO doubLevel(String doubLevel) {
+    this.doubLevel = doubLevel;
+    return this;
+  }
+
+  /**
+   * Get doubLevel
+   * @return doubLevel
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getDoubLevel() {
+    return doubLevel;
+  }
+
+  public void setDoubLevel(String doubLevel) {
+    this.doubLevel = doubLevel;
+  }
+
+  public UserVO singLevel(Integer singLevel) {
+    this.singLevel = singLevel;
+    return this;
+  }
+
+  /**
+   * Get singLevel
+   * @return singLevel
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getSingLevel() {
+    return singLevel;
+  }
+
+  public void setSingLevel(Integer singLevel) {
+    this.singLevel = singLevel;
+  }
+
+  public UserVO skiType(String skiType) {
+    this.skiType = skiType;
+    return this;
+  }
+
+  /**
+   * Get skiType
+   * @return skiType
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getSkiType() {
+    return skiType;
+  }
+
+  public void setSkiType(String skiType) {
+    this.skiType = skiType;
+  }
+
+  public UserVO cardName(String cardName) {
+    this.cardName = cardName;
+    return this;
+  }
+
+  /**
+   * Get cardName
+   * @return cardName
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCardName() {
+    return cardName;
+  }
+
+  public void setCardName(String cardName) {
+    this.cardName = cardName;
+  }
+
+  public UserVO bank(String bank) {
+    this.bank = bank;
+    return this;
+  }
+
+  /**
+   * Get bank
+   * @return bank
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getBank() {
+    return bank;
+  }
+
+  public void setBank(String bank) {
+    this.bank = bank;
+  }
+
+  public UserVO cardNum(String cardNum) {
+    this.cardNum = cardNum;
+    return this;
+  }
+
+  /**
+   * Get cardNum
+   * @return cardNum
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCardNum() {
+    return cardNum;
+  }
+
+  public void setCardNum(String cardNum) {
+    this.cardNum = cardNum;
+  }
+
+  public UserVO gender(Integer gender) {
+    this.gender = gender;
+    return this;
+  }
+
+  /**
+   * Get gender
+   * @return gender
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getGender() {
+    return gender;
+  }
+
+  public void setGender(Integer gender) {
+    this.gender = gender;
+  }
+
+  public UserVO avataUrl(String avataUrl) {
+    this.avataUrl = avataUrl;
+    return this;
+  }
+
+  /**
+   * Get avataUrl
+   * @return avataUrl
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getAvataUrl() {
+    return avataUrl;
+  }
+
+  public void setAvataUrl(String avataUrl) {
+    this.avataUrl = avataUrl;
+  }
+
+  public UserVO nickName(String nickName) {
+    this.nickName = nickName;
+    return this;
+  }
+
+  /**
+   * Get nickName
+   * @return nickName
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getNickName() {
+    return nickName;
+  }
+
+  public void setNickName(String nickName) {
+    this.nickName = nickName;
+  }
+
+  public UserVO siganature(String siganature) {
+    this.siganature = siganature;
+    return this;
+  }
+
+  /**
+   * Get siganature
+   * @return siganature
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getSiganature() {
+    return siganature;
+  }
+
+  public void setSiganature(String siganature) {
+    this.siganature = siganature;
+  }
+
+  public UserVO tel(String tel) {
+    this.tel = tel;
+    return this;
+  }
+
+  /**
+   * Get tel
+   * @return tel
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getTel() {
+    return tel;
+  }
+
+  public void setTel(String tel) {
+    this.tel = tel;
+  }
+
+  public UserVO account(String account) {
+    this.account = account;
+    return this;
+  }
+
+  /**
+   * Get account
+   * @return account
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getAccount() {
+    return account;
+  }
+
+  public void setAccount(String account) {
+    this.account = account;
+  }
+
+  public UserVO openId(String openId) {
+    this.openId = openId;
+    return this;
+  }
+
+  /**
+   * Get openId
+   * @return openId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getOpenId() {
+    return openId;
+  }
+
+  public void setOpenId(String openId) {
+    this.openId = openId;
+  }
+
+  public UserVO freezAmount(String freezAmount) {
+    this.freezAmount = freezAmount;
+    return this;
+  }
+
+  /**
+   * Get freezAmount
+   * @return freezAmount
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getFreezAmount() {
+    return freezAmount;
+  }
+
+  public void setFreezAmount(String freezAmount) {
+    this.freezAmount = freezAmount;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    UserVO userVO = (UserVO) o;
+    return Objects.equals(this.doubLevel, userVO.doubLevel) &&
+        Objects.equals(this.singLevel, userVO.singLevel) &&
+        Objects.equals(this.skiType, userVO.skiType) &&
+        Objects.equals(this.cardName, userVO.cardName) &&
+        Objects.equals(this.bank, userVO.bank) &&
+        Objects.equals(this.cardNum, userVO.cardNum) &&
+        Objects.equals(this.gender, userVO.gender) &&
+        Objects.equals(this.avataUrl, userVO.avataUrl) &&
+        Objects.equals(this.nickName, userVO.nickName) &&
+        Objects.equals(this.siganature, userVO.siganature) &&
+        Objects.equals(this.tel, userVO.tel) &&
+        Objects.equals(this.account, userVO.account) &&
+        Objects.equals(this.openId, userVO.openId) &&
+        Objects.equals(this.freezAmount, userVO.freezAmount);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(doubLevel, singLevel, skiType, cardName, bank, cardNum, gender, avataUrl, nickName, siganature, tel, account, openId, freezAmount);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class UserVO {\n");
+    
+    sb.append("    doubLevel: ").append(toIndentedString(doubLevel)).append("\n");
+    sb.append("    singLevel: ").append(toIndentedString(singLevel)).append("\n");
+    sb.append("    skiType: ").append(toIndentedString(skiType)).append("\n");
+    sb.append("    cardName: ").append(toIndentedString(cardName)).append("\n");
+    sb.append("    bank: ").append(toIndentedString(bank)).append("\n");
+    sb.append("    cardNum: ").append(toIndentedString(cardNum)).append("\n");
+    sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
+    sb.append("    avataUrl: ").append(toIndentedString(avataUrl)).append("\n");
+    sb.append("    nickName: ").append(toIndentedString(nickName)).append("\n");
+    sb.append("    siganature: ").append(toIndentedString(siganature)).append("\n");
+    sb.append("    tel: ").append(toIndentedString(tel)).append("\n");
+    sb.append("    account: ").append(toIndentedString(account)).append("\n");
+    sb.append("    openId: ").append(toIndentedString(openId)).append("\n");
+    sb.append("    freezAmount: ").append(toIndentedString(freezAmount)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

@@ -1,0 +1,106 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * FeedBackVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class FeedBackVO   {
+  @JsonProperty("openId")
+  private String openId = null;
+
+  @JsonProperty("content")
+  private String content = null;
+
+  public FeedBackVO openId(String openId) {
+    this.openId = openId;
+    return this;
+  }
+
+  /**
+   * Get openId
+   * @return openId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getOpenId() {
+    return openId;
+  }
+
+  public void setOpenId(String openId) {
+    this.openId = openId;
+  }
+
+  public FeedBackVO content(String content) {
+    this.content = content;
+    return this;
+  }
+
+  /**
+   * Get content
+   * @return content
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getContent() {
+    return content;
+  }
+
+  public void setContent(String content) {
+    this.content = content;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    FeedBackVO feedBackVO = (FeedBackVO) o;
+    return Objects.equals(this.openId, feedBackVO.openId) &&
+        Objects.equals(this.content, feedBackVO.content);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(openId, content);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class FeedBackVO {\n");
+    
+    sb.append("    openId: ").append(toIndentedString(openId)).append("\n");
+    sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

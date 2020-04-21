@@ -1,0 +1,144 @@
+package com.bananalab.corecloud.api.model;
+
+import java.util.Objects;
+import com.bananalab.corecloud.api.model.StoreList1Data;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * StoreList1
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-16T11:41:54.491+08:00")
+
+public class StoreList1   {
+  @JsonProperty("code")
+  private Integer code = null;
+
+  @JsonProperty("msg")
+  private String msg = null;
+
+  @JsonProperty("data")
+  @Valid
+  private List<StoreList1Data> data = null;
+
+  public StoreList1 code(Integer code) {
+    this.code = code;
+    return this;
+  }
+
+  /**
+   * Get code
+   * @return code
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getCode() {
+    return code;
+  }
+
+  public void setCode(Integer code) {
+    this.code = code;
+  }
+
+  public StoreList1 msg(String msg) {
+    this.msg = msg;
+    return this;
+  }
+
+  /**
+   * Get msg
+   * @return msg
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getMsg() {
+    return msg;
+  }
+
+  public void setMsg(String msg) {
+    this.msg = msg;
+  }
+
+  public StoreList1 data(List<StoreList1Data> data) {
+    this.data = data;
+    return this;
+  }
+
+  public StoreList1 addDataItem(StoreList1Data dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<StoreList1Data>();
+    }
+    this.data.add(dataItem);
+    return this;
+  }
+
+  /**
+   * Get data
+   * @return data
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public List<StoreList1Data> getData() {
+    return data;
+  }
+
+  public void setData(List<StoreList1Data> data) {
+    this.data = data;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    StoreList1 storeList1 = (StoreList1) o;
+    return Objects.equals(this.code, storeList1.code) &&
+        Objects.equals(this.msg, storeList1.msg) &&
+        Objects.equals(this.data, storeList1.data);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(code, msg, data);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class StoreList1 {\n");
+    
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    msg: ").append(toIndentedString(msg)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

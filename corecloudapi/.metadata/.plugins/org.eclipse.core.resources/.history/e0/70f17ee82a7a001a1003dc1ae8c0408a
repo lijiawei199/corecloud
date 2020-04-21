@@ -1,0 +1,181 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * WxpayVOData
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class WxpayVOData   {
+  @JsonProperty("paySign")
+  private String paySign = null;
+
+  @JsonProperty("package")
+  private String _package = null;
+
+  @JsonProperty("nonceStr")
+  private String nonceStr = null;
+
+  @JsonProperty("timeStamp")
+  private String timeStamp = null;
+
+  @JsonProperty("signType")
+  private String signType = null;
+
+  public WxpayVOData paySign(String paySign) {
+    this.paySign = paySign;
+    return this;
+  }
+
+  /**
+   * Get paySign
+   * @return paySign
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getPaySign() {
+    return paySign;
+  }
+
+  public void setPaySign(String paySign) {
+    this.paySign = paySign;
+  }
+
+  public WxpayVOData _package(String _package) {
+    this._package = _package;
+    return this;
+  }
+
+  /**
+   * Get _package
+   * @return _package
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getPackage() {
+    return _package;
+  }
+
+  public void setPackage(String _package) {
+    this._package = _package;
+  }
+
+  public WxpayVOData nonceStr(String nonceStr) {
+    this.nonceStr = nonceStr;
+    return this;
+  }
+
+  /**
+   * Get nonceStr
+   * @return nonceStr
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getNonceStr() {
+    return nonceStr;
+  }
+
+  public void setNonceStr(String nonceStr) {
+    this.nonceStr = nonceStr;
+  }
+
+  public WxpayVOData timeStamp(String timeStamp) {
+    this.timeStamp = timeStamp;
+    return this;
+  }
+
+  /**
+   * Get timeStamp
+   * @return timeStamp
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getTimeStamp() {
+    return timeStamp;
+  }
+
+  public void setTimeStamp(String timeStamp) {
+    this.timeStamp = timeStamp;
+  }
+
+  public WxpayVOData signType(String signType) {
+    this.signType = signType;
+    return this;
+  }
+
+  /**
+   * Get signType
+   * @return signType
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getSignType() {
+    return signType;
+  }
+
+  public void setSignType(String signType) {
+    this.signType = signType;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    WxpayVOData wxpayVOData = (WxpayVOData) o;
+    return Objects.equals(this.paySign, wxpayVOData.paySign) &&
+        Objects.equals(this._package, wxpayVOData._package) &&
+        Objects.equals(this.nonceStr, wxpayVOData.nonceStr) &&
+        Objects.equals(this.timeStamp, wxpayVOData.timeStamp) &&
+        Objects.equals(this.signType, wxpayVOData.signType);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(paySign, _package, nonceStr, timeStamp, signType);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class WxpayVOData {\n");
+    
+    sb.append("    paySign: ").append(toIndentedString(paySign)).append("\n");
+    sb.append("    _package: ").append(toIndentedString(_package)).append("\n");
+    sb.append("    nonceStr: ").append(toIndentedString(nonceStr)).append("\n");
+    sb.append("    timeStamp: ").append(toIndentedString(timeStamp)).append("\n");
+    sb.append("    signType: ").append(toIndentedString(signType)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

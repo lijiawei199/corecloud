@@ -1,0 +1,81 @@
+package com.bananalab.snow.api;
+
+import com.bananalab.snow.api.model.BaseVO;
+import com.bananalab.snow.api.model.OrderVO;
+import com.bananalab.snow.api.model.Orderdetail;
+import com.bananalab.snow.api.model.Orderlist;
+import com.bananalab.snow.api.model.WxpayVO;
+import io.swagger.annotations.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.validation.constraints.*;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+@Controller
+@RequestMapping("${openapi.Qpk API.base-path:/snow}")
+public class OrderApiController implements OrderApi {
+
+    private final OrderApiDelegate delegate;
+
+    public OrderApiController(@org.springframework.beans.factory.annotation.Autowired(required = false) OrderApiDelegate delegate) {
+        this.delegate = delegate;
+    }
+
+    public ResponseEntity<BaseVO> beginstudy(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "orderId") @Valid @RequestParam(value = "orderId", required = false) String orderId) {
+        return delegate.beginstudy(token, orderId);
+    }
+
+    public ResponseEntity<BaseVO> cancel(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "orderId") @Valid @RequestParam(value = "orderId", required = false) String orderId,@ApiParam(value = "reason") @Valid @RequestParam(value = "reason", required = false) String reason) {
+        return delegate.cancel(token, orderId, reason);
+    }
+
+    public ResponseEntity<BaseVO> confirm(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "orderId") @Valid @RequestParam(value = "orderId", required = false) String orderId) {
+        return delegate.confirm(token, orderId);
+    }
+
+    public ResponseEntity<BaseVO> endstudy(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "orderId") @Valid @RequestParam(value = "orderId", required = false) String orderId) {
+        return delegate.endstudy(token, orderId);
+    }
+
+    public ResponseEntity<Orderlist> halllist(@ApiParam(value = "0全部 单板 双板  这里传中文") @Valid @RequestParam(value = "skiType", required = false) String skiType,@ApiParam(value = "0升序 1降序") @Valid @RequestParam(value = "money", required = false) String money,@ApiParam(value = "0全部 1男 2女") @Valid @RequestParam(value = "gender", required = false) String gender,@ApiParam(value = "雪场Id") @Valid @RequestParam(value = "fieldId", required = false) Integer fieldId) {
+        return delegate.halllist(skiType, money, gender, fieldId);
+    }
+
+    public ResponseEntity<Orderdetail> orderdetail(@NotNull @ApiParam(value = "orderId", required = true) @Valid @RequestParam(value = "orderId", required = true) String orderId) {
+        return delegate.orderdetail(orderId);
+    }
+
+    public ResponseEntity<Orderlist> orderlist(@ApiParam(value = "stuOpenId") @Valid @RequestParam(value = "stuOpenId", required = false) String stuOpenId,@ApiParam(value = "coachOpenId") @Valid @RequestParam(value = "coachOpenId", required = false) String coachOpenId,@ApiParam(value = "状态 -1 全部 0未付款 1已付款（等待接单） 2 已接单 3 待确认 4 已完成 5 退款申请中 6退款完成 7 已评价 8 已取消") @Valid @RequestParam(value = "state", required = false) String state) {
+        return delegate.orderlist(stuOpenId, coachOpenId, state);
+    }
+
+    public ResponseEntity<WxpayVO> orderwxpay(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "") @Valid @RequestParam(value = "orderId", required = false) String orderId) {
+        return delegate.orderwxpay(token, orderId);
+    }
+
+    public ResponseEntity<BaseVO> prepare(@ApiParam(value = "order"  )  @Valid @RequestBody OrderVO order) {
+        return delegate.prepare(order);
+    }
+
+    public ResponseEntity<BaseVO> receipt(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "orderId") @Valid @RequestParam(value = "orderId", required = false) String orderId,@ApiParam(value = "coachTel") @Valid @RequestParam(value = "coachTel", required = false) String coachTel) {
+        return delegate.receipt(token, orderId, coachTel);
+    }
+
+    public ResponseEntity<BaseVO> refund(@ApiParam(value = "" ,required=true) @RequestHeader(value="token", required=true) String token,@ApiParam(value = "orderId") @Valid @RequestParam(value = "orderId", required = false) String orderId,@ApiParam(value = "reason") @Valid @RequestParam(value = "reason", required = false) String reason) {
+        return delegate.refund(token, orderId, reason);
+    }
+
+}

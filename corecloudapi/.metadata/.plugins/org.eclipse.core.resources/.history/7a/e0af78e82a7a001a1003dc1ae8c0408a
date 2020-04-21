@@ -1,0 +1,93 @@
+package com.bananalab.snow.api;
+
+import com.bananalab.snow.api.model.BaseVO;
+import com.bananalab.snow.api.model.OrderVO;
+import com.bananalab.snow.api.model.Orderdetail;
+import com.bananalab.snow.api.model.Orderlist;
+import com.bananalab.snow.api.model.WxpayVO;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link OrderApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public interface OrderApiDelegate {
+
+    /**
+     * @see OrderApi#beginstudy
+     */
+    ResponseEntity<BaseVO> beginstudy( String  token,
+         String  orderId);
+
+    /**
+     * @see OrderApi#cancel
+     */
+    ResponseEntity<BaseVO> cancel( String  token,
+         String  orderId,
+         String  reason);
+
+    /**
+     * @see OrderApi#confirm
+     */
+    ResponseEntity<BaseVO> confirm( String  token,
+         String  orderId);
+
+    /**
+     * @see OrderApi#endstudy
+     */
+    ResponseEntity<BaseVO> endstudy( String  token,
+         String  orderId);
+
+    /**
+     * @see OrderApi#halllist
+     */
+    ResponseEntity<Orderlist> halllist( String  skiType,
+         String  money,
+         String  gender,
+         Integer  fieldId);
+
+    /**
+     * @see OrderApi#orderdetail
+     */
+    ResponseEntity<Orderdetail> orderdetail( String  orderId);
+
+    /**
+     * @see OrderApi#orderlist
+     */
+    ResponseEntity<Orderlist> orderlist( String  stuOpenId,
+         String  coachOpenId,
+         String  state);
+
+    /**
+     * @see OrderApi#orderwxpay
+     */
+    ResponseEntity<WxpayVO> orderwxpay( String  token,
+         String  orderId);
+
+    /**
+     * @see OrderApi#prepare
+     */
+    ResponseEntity<BaseVO> prepare( OrderVO  order);
+
+    /**
+     * @see OrderApi#receipt
+     */
+    ResponseEntity<BaseVO> receipt( String  token,
+         String  orderId,
+         String  coachTel);
+
+    /**
+     * @see OrderApi#refund
+     */
+    ResponseEntity<BaseVO> refund( String  token,
+         String  orderId,
+         String  reason);
+
+}

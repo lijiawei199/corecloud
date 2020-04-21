@@ -1,0 +1,232 @@
+package com.bananalab.corecloud.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * 店铺排行
+ */
+@ApiModel(description = "店铺排行")
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:30:40.698+08:00")
+
+public class StoreRankVO   {
+  @JsonProperty("name")
+  private String name = null;
+
+  @JsonProperty("plateaueffect")
+  private Integer plateaueffect = null;
+
+  @JsonProperty("collectpower")
+  private Integer collectpower = null;
+
+  @JsonProperty("score")
+  private Integer score = null;
+
+  @JsonProperty("fid")
+  private String fid = null;
+
+  @JsonProperty("floor")
+  private Integer floor = null;
+
+  @JsonProperty("pic_url")
+  private String picUrl = null;
+
+  public StoreRankVO name(String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * 店铺名
+   * @return name
+  **/
+  @ApiModelProperty(value = "店铺名")
+
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public StoreRankVO plateaueffect(Integer plateaueffect) {
+    this.plateaueffect = plateaueffect;
+    return this;
+  }
+
+  /**
+   * 坪效
+   * @return plateaueffect
+  **/
+  @ApiModelProperty(value = "坪效")
+
+
+  public Integer getPlateaueffect() {
+    return plateaueffect;
+  }
+
+  public void setPlateaueffect(Integer plateaueffect) {
+    this.plateaueffect = plateaueffect;
+  }
+
+  public StoreRankVO collectpower(Integer collectpower) {
+    this.collectpower = collectpower;
+    return this;
+  }
+
+  /**
+   * 集客力
+   * @return collectpower
+  **/
+  @ApiModelProperty(value = "集客力")
+
+
+  public Integer getCollectpower() {
+    return collectpower;
+  }
+
+  public void setCollectpower(Integer collectpower) {
+    this.collectpower = collectpower;
+  }
+
+  public StoreRankVO score(Integer score) {
+    this.score = score;
+    return this;
+  }
+
+  /**
+   * 评分
+   * @return score
+  **/
+  @ApiModelProperty(value = "评分")
+
+
+  public Integer getScore() {
+    return score;
+  }
+
+  public void setScore(Integer score) {
+    this.score = score;
+  }
+
+  public StoreRankVO fid(String fid) {
+    this.fid = fid;
+    return this;
+  }
+
+  /**
+   * fid
+   * @return fid
+  **/
+  @ApiModelProperty(value = "fid")
+
+
+  public String getFid() {
+    return fid;
+  }
+
+  public void setFid(String fid) {
+    this.fid = fid;
+  }
+
+  public StoreRankVO floor(Integer floor) {
+    this.floor = floor;
+    return this;
+  }
+
+  /**
+   * 楼层
+   * @return floor
+  **/
+  @ApiModelProperty(value = "楼层")
+
+
+  public Integer getFloor() {
+    return floor;
+  }
+
+  public void setFloor(Integer floor) {
+    this.floor = floor;
+  }
+
+  public StoreRankVO picUrl(String picUrl) {
+    this.picUrl = picUrl;
+    return this;
+  }
+
+  /**
+   * 图片地址
+   * @return picUrl
+  **/
+  @ApiModelProperty(value = "图片地址")
+
+
+  public String getPicUrl() {
+    return picUrl;
+  }
+
+  public void setPicUrl(String picUrl) {
+    this.picUrl = picUrl;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    StoreRankVO storeRankVO = (StoreRankVO) o;
+    return Objects.equals(this.name, storeRankVO.name) &&
+        Objects.equals(this.plateaueffect, storeRankVO.plateaueffect) &&
+        Objects.equals(this.collectpower, storeRankVO.collectpower) &&
+        Objects.equals(this.score, storeRankVO.score) &&
+        Objects.equals(this.fid, storeRankVO.fid) &&
+        Objects.equals(this.floor, storeRankVO.floor) &&
+        Objects.equals(this.picUrl, storeRankVO.picUrl);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, plateaueffect, collectpower, score, fid, floor, picUrl);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class StoreRankVO {\n");
+    
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    plateaueffect: ").append(toIndentedString(plateaueffect)).append("\n");
+    sb.append("    collectpower: ").append(toIndentedString(collectpower)).append("\n");
+    sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    fid: ").append(toIndentedString(fid)).append("\n");
+    sb.append("    floor: ").append(toIndentedString(floor)).append("\n");
+    sb.append("    picUrl: ").append(toIndentedString(picUrl)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

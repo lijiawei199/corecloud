@@ -1,0 +1,281 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * RemarkVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class RemarkVO   {
+  @JsonProperty("star")
+  private String star = null;
+
+  @JsonProperty("stuOpenId")
+  private String stuOpenId = null;
+
+  @JsonProperty("orderId")
+  private String orderId = null;
+
+  @JsonProperty("coachOpenId")
+  private String coachOpenId = null;
+
+  @JsonProperty("coachAvataUrl")
+  private String coachAvataUrl = null;
+
+  @JsonProperty("coachNickName")
+  private String coachNickName = null;
+
+  @JsonProperty("remarkTime")
+  private String remarkTime = null;
+
+  @JsonProperty("gender")
+  private Integer gender = null;
+
+  @JsonProperty("singLevel")
+  private Integer singLevel = null;
+
+  public RemarkVO star(String star) {
+    this.star = star;
+    return this;
+  }
+
+  /**
+   * Get star
+   * @return star
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getStar() {
+    return star;
+  }
+
+  public void setStar(String star) {
+    this.star = star;
+  }
+
+  public RemarkVO stuOpenId(String stuOpenId) {
+    this.stuOpenId = stuOpenId;
+    return this;
+  }
+
+  /**
+   * Get stuOpenId
+   * @return stuOpenId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getStuOpenId() {
+    return stuOpenId;
+  }
+
+  public void setStuOpenId(String stuOpenId) {
+    this.stuOpenId = stuOpenId;
+  }
+
+  public RemarkVO orderId(String orderId) {
+    this.orderId = orderId;
+    return this;
+  }
+
+  /**
+   * Get orderId
+   * @return orderId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getOrderId() {
+    return orderId;
+  }
+
+  public void setOrderId(String orderId) {
+    this.orderId = orderId;
+  }
+
+  public RemarkVO coachOpenId(String coachOpenId) {
+    this.coachOpenId = coachOpenId;
+    return this;
+  }
+
+  /**
+   * Get coachOpenId
+   * @return coachOpenId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCoachOpenId() {
+    return coachOpenId;
+  }
+
+  public void setCoachOpenId(String coachOpenId) {
+    this.coachOpenId = coachOpenId;
+  }
+
+  public RemarkVO coachAvataUrl(String coachAvataUrl) {
+    this.coachAvataUrl = coachAvataUrl;
+    return this;
+  }
+
+  /**
+   * Get coachAvataUrl
+   * @return coachAvataUrl
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCoachAvataUrl() {
+    return coachAvataUrl;
+  }
+
+  public void setCoachAvataUrl(String coachAvataUrl) {
+    this.coachAvataUrl = coachAvataUrl;
+  }
+
+  public RemarkVO coachNickName(String coachNickName) {
+    this.coachNickName = coachNickName;
+    return this;
+  }
+
+  /**
+   * Get coachNickName
+   * @return coachNickName
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCoachNickName() {
+    return coachNickName;
+  }
+
+  public void setCoachNickName(String coachNickName) {
+    this.coachNickName = coachNickName;
+  }
+
+  public RemarkVO remarkTime(String remarkTime) {
+    this.remarkTime = remarkTime;
+    return this;
+  }
+
+  /**
+   * Get remarkTime
+   * @return remarkTime
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getRemarkTime() {
+    return remarkTime;
+  }
+
+  public void setRemarkTime(String remarkTime) {
+    this.remarkTime = remarkTime;
+  }
+
+  public RemarkVO gender(Integer gender) {
+    this.gender = gender;
+    return this;
+  }
+
+  /**
+   * Get gender
+   * @return gender
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getGender() {
+    return gender;
+  }
+
+  public void setGender(Integer gender) {
+    this.gender = gender;
+  }
+
+  public RemarkVO singLevel(Integer singLevel) {
+    this.singLevel = singLevel;
+    return this;
+  }
+
+  /**
+   * Get singLevel
+   * @return singLevel
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getSingLevel() {
+    return singLevel;
+  }
+
+  public void setSingLevel(Integer singLevel) {
+    this.singLevel = singLevel;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    RemarkVO remarkVO = (RemarkVO) o;
+    return Objects.equals(this.star, remarkVO.star) &&
+        Objects.equals(this.stuOpenId, remarkVO.stuOpenId) &&
+        Objects.equals(this.orderId, remarkVO.orderId) &&
+        Objects.equals(this.coachOpenId, remarkVO.coachOpenId) &&
+        Objects.equals(this.coachAvataUrl, remarkVO.coachAvataUrl) &&
+        Objects.equals(this.coachNickName, remarkVO.coachNickName) &&
+        Objects.equals(this.remarkTime, remarkVO.remarkTime) &&
+        Objects.equals(this.gender, remarkVO.gender) &&
+        Objects.equals(this.singLevel, remarkVO.singLevel);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(star, stuOpenId, orderId, coachOpenId, coachAvataUrl, coachNickName, remarkTime, gender, singLevel);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class RemarkVO {\n");
+    
+    sb.append("    star: ").append(toIndentedString(star)).append("\n");
+    sb.append("    stuOpenId: ").append(toIndentedString(stuOpenId)).append("\n");
+    sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
+    sb.append("    coachOpenId: ").append(toIndentedString(coachOpenId)).append("\n");
+    sb.append("    coachAvataUrl: ").append(toIndentedString(coachAvataUrl)).append("\n");
+    sb.append("    coachNickName: ").append(toIndentedString(coachNickName)).append("\n");
+    sb.append("    remarkTime: ").append(toIndentedString(remarkTime)).append("\n");
+    sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
+    sb.append("    singLevel: ").append(toIndentedString(singLevel)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

@@ -1,0 +1,126 @@
+package com.bananalab.corecloud.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * StoreUseVo
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:30:40.698+08:00")
+
+public class StoreUseVo   {
+  @JsonProperty("used")
+  @Valid
+  private List<Integer> used = null;
+
+  @JsonProperty("notUsed")
+  @Valid
+  private List<Integer> notUsed = null;
+
+  public StoreUseVo used(List<Integer> used) {
+    this.used = used;
+    return this;
+  }
+
+  public StoreUseVo addUsedItem(Integer usedItem) {
+    if (this.used == null) {
+      this.used = new ArrayList<Integer>();
+    }
+    this.used.add(usedItem);
+    return this;
+  }
+
+  /**
+   * Get used
+   * @return used
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public List<Integer> getUsed() {
+    return used;
+  }
+
+  public void setUsed(List<Integer> used) {
+    this.used = used;
+  }
+
+  public StoreUseVo notUsed(List<Integer> notUsed) {
+    this.notUsed = notUsed;
+    return this;
+  }
+
+  public StoreUseVo addNotUsedItem(Integer notUsedItem) {
+    if (this.notUsed == null) {
+      this.notUsed = new ArrayList<Integer>();
+    }
+    this.notUsed.add(notUsedItem);
+    return this;
+  }
+
+  /**
+   * Get notUsed
+   * @return notUsed
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public List<Integer> getNotUsed() {
+    return notUsed;
+  }
+
+  public void setNotUsed(List<Integer> notUsed) {
+    this.notUsed = notUsed;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    StoreUseVo storeUseVo = (StoreUseVo) o;
+    return Objects.equals(this.used, storeUseVo.used) &&
+        Objects.equals(this.notUsed, storeUseVo.notUsed);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(used, notUsed);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class StoreUseVo {\n");
+    
+    sb.append("    used: ").append(toIndentedString(used)).append("\n");
+    sb.append("    notUsed: ").append(toIndentedString(notUsed)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

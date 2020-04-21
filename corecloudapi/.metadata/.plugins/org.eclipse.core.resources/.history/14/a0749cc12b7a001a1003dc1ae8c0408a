@@ -1,0 +1,246 @@
+package com.bananalab.corecloud.api.model;
+
+import java.util.Objects;
+import com.bananalab.corecloud.api.model.FormatDistriVO;
+import com.bananalab.corecloud.api.model.IndexVOFlow;
+import com.bananalab.corecloud.api.model.IndexVOSale;
+import com.bananalab.corecloud.api.model.IndexVOSpace;
+import com.bananalab.corecloud.api.model.StoreTransVO;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * 首页信息
+ */
+@ApiModel(description = "首页信息")
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:30:40.698+08:00")
+
+public class IndexVO   {
+  @JsonProperty("flow")
+  private IndexVOFlow flow = null;
+
+  @JsonProperty("sale")
+  private IndexVOSale sale = null;
+
+  @JsonProperty("space")
+  private IndexVOSpace space = null;
+
+  @JsonProperty("formatdistri")
+  @Valid
+  private List<FormatDistriVO> formatdistri = null;
+
+  @JsonProperty("top3")
+  @Valid
+  private List<StoreTransVO> top3 = null;
+
+  @JsonProperty("todayMsg")
+  @Valid
+  private List<String> todayMsg = null;
+
+  public IndexVO flow(IndexVOFlow flow) {
+    this.flow = flow;
+    return this;
+  }
+
+  /**
+   * Get flow
+   * @return flow
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public IndexVOFlow getFlow() {
+    return flow;
+  }
+
+  public void setFlow(IndexVOFlow flow) {
+    this.flow = flow;
+  }
+
+  public IndexVO sale(IndexVOSale sale) {
+    this.sale = sale;
+    return this;
+  }
+
+  /**
+   * Get sale
+   * @return sale
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public IndexVOSale getSale() {
+    return sale;
+  }
+
+  public void setSale(IndexVOSale sale) {
+    this.sale = sale;
+  }
+
+  public IndexVO space(IndexVOSpace space) {
+    this.space = space;
+    return this;
+  }
+
+  /**
+   * Get space
+   * @return space
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public IndexVOSpace getSpace() {
+    return space;
+  }
+
+  public void setSpace(IndexVOSpace space) {
+    this.space = space;
+  }
+
+  public IndexVO formatdistri(List<FormatDistriVO> formatdistri) {
+    this.formatdistri = formatdistri;
+    return this;
+  }
+
+  public IndexVO addFormatdistriItem(FormatDistriVO formatdistriItem) {
+    if (this.formatdistri == null) {
+      this.formatdistri = new ArrayList<FormatDistriVO>();
+    }
+    this.formatdistri.add(formatdistriItem);
+    return this;
+  }
+
+  /**
+   * Get formatdistri
+   * @return formatdistri
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+
+  public List<FormatDistriVO> getFormatdistri() {
+    return formatdistri;
+  }
+
+  public void setFormatdistri(List<FormatDistriVO> formatdistri) {
+    this.formatdistri = formatdistri;
+  }
+
+  public IndexVO top3(List<StoreTransVO> top3) {
+    this.top3 = top3;
+    return this;
+  }
+
+  public IndexVO addTop3Item(StoreTransVO top3Item) {
+    if (this.top3 == null) {
+      this.top3 = new ArrayList<StoreTransVO>();
+    }
+    this.top3.add(top3Item);
+    return this;
+  }
+
+  /**
+   * 店铺转化率 top3
+   * @return top3
+  **/
+  @ApiModelProperty(value = "店铺转化率 top3")
+
+  @Valid
+
+  public List<StoreTransVO> getTop3() {
+    return top3;
+  }
+
+  public void setTop3(List<StoreTransVO> top3) {
+    this.top3 = top3;
+  }
+
+  public IndexVO todayMsg(List<String> todayMsg) {
+    this.todayMsg = todayMsg;
+    return this;
+  }
+
+  public IndexVO addTodayMsgItem(String todayMsgItem) {
+    if (this.todayMsg == null) {
+      this.todayMsg = new ArrayList<String>();
+    }
+    this.todayMsg.add(todayMsgItem);
+    return this;
+  }
+
+  /**
+   * Get todayMsg
+   * @return todayMsg
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public List<String> getTodayMsg() {
+    return todayMsg;
+  }
+
+  public void setTodayMsg(List<String> todayMsg) {
+    this.todayMsg = todayMsg;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    IndexVO indexVO = (IndexVO) o;
+    return Objects.equals(this.flow, indexVO.flow) &&
+        Objects.equals(this.sale, indexVO.sale) &&
+        Objects.equals(this.space, indexVO.space) &&
+        Objects.equals(this.formatdistri, indexVO.formatdistri) &&
+        Objects.equals(this.top3, indexVO.top3) &&
+        Objects.equals(this.todayMsg, indexVO.todayMsg);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(flow, sale, space, formatdistri, top3, todayMsg);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class IndexVO {\n");
+    
+    sb.append("    flow: ").append(toIndentedString(flow)).append("\n");
+    sb.append("    sale: ").append(toIndentedString(sale)).append("\n");
+    sb.append("    space: ").append(toIndentedString(space)).append("\n");
+    sb.append("    formatdistri: ").append(toIndentedString(formatdistri)).append("\n");
+    sb.append("    top3: ").append(toIndentedString(top3)).append("\n");
+    sb.append("    todayMsg: ").append(toIndentedString(todayMsg)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

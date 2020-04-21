@@ -1,0 +1,87 @@
+package com.bananalab.corecloud.api;
+
+import com.bananalab.corecloud.api.model.Brandlist;
+import com.bananalab.corecloud.api.model.Equiplist;
+import com.bananalab.corecloud.api.model.Flowtop5;
+import com.bananalab.corecloud.api.model.Flowtrend;
+import com.bananalab.corecloud.api.model.Flowview;
+import com.bananalab.corecloud.api.model.Formatdistri;
+import com.bananalab.corecloud.api.model.Formatratio;
+import com.bananalab.corecloud.api.model.Kpitrend;
+import com.bananalab.corecloud.api.model.Kpiview;
+import com.bananalab.corecloud.api.model.Marketflowcompare;
+import com.bananalab.corecloud.api.model.Storetflowcompare;
+import io.swagger.annotations.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.validation.constraints.*;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-21T11:23:54.562+08:00")
+
+@Controller
+@RequestMapping("${openapi.Qpk API.base-path:/market}")
+public class DataApiController implements DataApi {
+
+    private final DataApiDelegate delegate;
+
+    public DataApiController(@org.springframework.beans.factory.annotation.Autowired(required = false) DataApiDelegate delegate) {
+        this.delegate = delegate;
+    }
+
+    public ResponseEntity<Brandlist> brandlist(@NotNull @ApiParam(value = "业态", required = true) @Valid @RequestParam(value = "format", required = true) String format,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "floor", required = true) String floor,@NotNull @ApiParam(value = "第几页", required = true) @Valid @RequestParam(value = "page", required = true) Integer page) {
+        return delegate.brandlist(format, floor, page);
+    }
+
+    public ResponseEntity<Flowtop5> flowtop5() {
+        return delegate.flowtop5();
+    }
+
+    public ResponseEntity<Flowtrend> flowtrend(@NotNull @ApiParam(value = "0 1 2（周|月|年）", required = true) @Valid @RequestParam(value = "timerange", required = true) Integer timerange,@NotNull @ApiParam(value = "sale|flow||plateau|collect|value|trans", required = true) @Valid @RequestParam(value = "data", required = true) String data,@NotNull @ApiParam(value = "fid", required = true) @Valid @RequestParam(value = "fid", required = true) String fid) {
+        return delegate.flowtrend(timerange, data, fid);
+    }
+
+    public ResponseEntity<Flowview> flowview() {
+        return delegate.flowview();
+    }
+
+    public ResponseEntity<Formatdistri> formatdistri() {
+        return delegate.formatdistri();
+    }
+
+    public ResponseEntity<Formatratio> formatratio() {
+        return delegate.formatratio();
+    }
+
+    public ResponseEntity<Kpitrend> kpitrend() {
+        return delegate.kpitrend();
+    }
+
+    public ResponseEntity<Kpiview> kpiview(@NotNull @ApiParam(value = "当次时间", required = true) @Valid @RequestParam(value = "this", required = true) String _this,@NotNull @ApiParam(value = "上次时间", required = true) @Valid @RequestParam(value = "last", required = true) String last,@NotNull @ApiParam(value = "0正常 1按周", required = true) @Valid @RequestParam(value = "week", required = true) String week) {
+        return delegate.kpiview(_this, last, week);
+    }
+
+    public ResponseEntity<Marketflowcompare> marketflowcompare(@NotNull @ApiParam(value = "开始时间", required = true) @Valid @RequestParam(value = "startDate", required = true) String startDate,@NotNull @ApiParam(value = "结束时间", required = true) @Valid @RequestParam(value = "startTime", required = true) String startTime) {
+        return delegate.marketflowcompare(startDate, startTime);
+    }
+
+    public ResponseEntity<Equiplist> nownotify() {
+        return delegate.nownotify();
+    }
+
+    public ResponseEntity<Storetflowcompare> storetflowcompare(@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "floor", required = true) String floor,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "renge", required = true) String renge,@NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "date", required = true) String date) {
+        return delegate.storetflowcompare(floor, renge, date);
+    }
+
+}

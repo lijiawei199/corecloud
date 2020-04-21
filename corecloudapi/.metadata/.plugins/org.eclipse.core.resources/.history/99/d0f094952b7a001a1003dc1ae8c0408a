@@ -1,0 +1,142 @@
+---
+name: "Java Spring (boot-MVC-CloudFeign) Server"
+genTemplateId: "com.modelsolv.reprezen.gentemplates.swagger.codegen.SpringCodegen"
+relativeOutputDir: generated
+prerequisites: null
+primarySource: 
+  path: "../../../models/corecloud.yaml"
+namedSources: null 
+# The parameters object contains variables that are processed directly by the GenTemplate.
+parameters: 
+  # Sort method arguments to place required parameters before optional parameters.
+  sortParamsByRequiredFlag: null
+  
+  # Whether to ensure parameter names are unique in an operation (rename parameters that are not).
+  ensureUniqueParams: null
+  
+  # boolean, toggles whether unicode identifiers are allowed in names or not, default is false
+  allowUnicodeIdentifiers: null
+  
+  # package for generated models
+  modelPackage: com.bananalab.corecloud.api.model
+  
+  # package for generated api classes
+  apiPackage: com.bananalab.corecloud.api
+  
+  # root package for generated code
+  invokerPackage: com.bananalab.corecloud
+  
+  # groupId in generated pom.xml
+  groupId: com.bananalab.corecloud
+  
+  # artifactId in generated pom.xml
+  artifactId: api
+  
+  # artifact version in generated pom.xml
+  artifactVersion: 1.0.0
+  
+  # artifact URL in generated pom.xml
+  artifactUrl: null
+  
+  # artifact description in generated pom.xml
+  artifactDescription: null
+  
+  # SCM connection in generated pom.xml
+  scmConnection: null
+  
+  # SCM developer connection in generated pom.xml
+  scmDeveloperConnection: null
+  
+  # SCM URL in generated pom.xml
+  scmUrl: null
+  
+  # developer name in generated pom.xml
+  developerName: null
+  
+  # developer email in generated pom.xml
+  developerEmail: null
+  
+  # developer organization in generated pom.xml
+  developerOrganization: null
+  
+  # developer organization URL in generated pom.xml
+  developerOrganizationUrl: null
+  
+  # The name of the license
+  licenseName: null
+  
+  # The URL of the license
+  licenseUrl: null
+  
+  # source folder for generated code
+  sourceFolder: null
+  
+  # prefix for generated code members and local variables
+  localVariablePrefix: null
+  
+  # boolean - toggle "implements Serializable" for generated models
+  serializableModel: null
+  
+  # Treat BigDecimal values as Strings to avoid precision loss.
+  bigDecimalAsString: "true"
+  
+  # whether to use fully qualified name for classes under java.util. This option only works for Java API client
+  fullJavaUtil: null
+  
+  # hides the timestamp when files were generated
+  hideGenerationTimestamp: null
+  
+  # Option. Date library to use
+  dateLibrary: null
+  
+  # server title name or client service name
+  title: "Qpk API"
+  
+  # configuration package for generated code
+  configPackage: com.meishi.configure
+  
+  # base package for generated code
+  basePackage: com.meishi
+  
+  # Whether to generate only API interface stubs without the server files.
+  interfaceOnly: null
+  
+  # Whether to generate the server files using the delegate pattern
+  delegatePattern: "true"
+  
+  # Whether to select only one produces/consumes content-type by operation.
+  singleContentTypes: null
+  
+  # use java8 default interface
+  java8: null
+  
+  # use async Callable controllers
+  async: null
+  
+  # wrap the responses in given type (Future,Callable,CompletableFuture,ListenableFuture,DeferredResult,HystrixCommand,RxObservable,RxSingle or fully qualified type)
+  responseWrapper: null
+  
+  # use tags for creating interface and controller classnames
+  useTags: null
+  
+  # Use BeanValidation API annotations
+  useBeanValidation: null
+  
+  # library template (sub-template) to use
+  library: null
+  
+  # Contents of swagger codegen configuration file.
+  # This is the file that would be passed with --config option on swagger codegen command line.
+  # The JSON contents of that file should be the value of this parameter.
+  # This parameter need not be used. If it is absent, all string-valued parameters are collected into
+  # a map that is then passed to the swagger codegen module. If a map is provided here, then string-valued
+  # parameters are still copied in, overriding like-named values appearing in the map.
+  swaggerCodegenConfig: null
+  
+  # System properties to set, as in the -D option of swagger codegen command line.
+  # Each property should be a json object with a name/value pair for each property.
+  # Example: for '-Dmodels -Dapis=User,Pets' use the following:
+  # value:
+  #   models: ''
+  #   apis: Users,Pets
+  swaggerCodegenSystemProperties: null

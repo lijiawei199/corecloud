@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bananalab.corecloud.mybatis.mapper.TenantMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bananalab.corecloud.mybatis.model.Tenant">
+        <id column="id" property="id" />
+        <result column="busy_cat" property="busyCat" />
+        <result column="brand" property="brand" />
+        <result column="name" property="name" />
+        <result column="tel" property="tel" />
+        <result column="lease_start" property="leaseStart" />
+        <result column="lease_end" property="leaseEnd" />
+        <result column="origin" property="origin" />
+        <result column="month_rent" property="monthRent" />
+        <result column="pic_url" property="picUrl" />
+        <result column="contract_num" property="contractNum" />
+        <result column="front_money" property="frontMoney" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, busy_cat, brand, name, tel, lease_start, lease_end, origin, month_rent, pic_url, contract_num, front_money
+    </sql>
+
+</mapper>

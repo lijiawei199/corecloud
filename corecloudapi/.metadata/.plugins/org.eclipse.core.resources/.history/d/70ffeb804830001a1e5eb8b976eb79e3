@@ -1,0 +1,602 @@
+---
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: "美识的AR的Restful API规范"
+host: www.wenxiaoda.com
+schemes: [http, https]
+produces:
+  - application/json
+basePath: /
+parameters:
+  token:
+    name: token
+    type: string
+    in: header
+    required: true
+  tokenQuery:
+    name: token
+    type: string
+    in: query
+    required: true
+paths:
+  /common/sms:
+    post:
+      tags:
+        - 公共接口
+      description: 发送手机验证码
+      operationId: sendvcode
+      parameters:
+        - name: phone
+          type: string
+          in: query
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  /common/fileUpload:
+    post:
+      tags:
+        - 公共接口
+      description: 文件格式上传
+      operationId: uploadFile
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: file
+          type: file
+          in: formData
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            title: fileUploadVOInfo
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                $ref: "#/definitions/fileUploadVO"
+  /common/byteFileUpload:
+    post:
+      tags:
+        - 公共接口
+      description: byte文件上传
+      operationId: uploadByteFile
+      consumes:
+        - application/octet-stream
+      parameters:
+        - in: body
+          name: file
+          schema:
+            type: string
+            format: byte
+      responses:
+        200:
+          description: success
+          schema:
+            title: fileUploadVOInfo
+            type: object
+            properties:
+              code:
+                type: integer
+              message:
+                type: string
+              data:
+                $ref: "#/definitions/fileUploadVO"
+  /login:
+    post:
+      tags:
+        - 登录
+      description: 登录
+      operationId: login
+      parameters:
+        - name: phone
+          type: string
+          in: query
+          description: 手机号
+        - name: code
+          type: string
+          in: query
+          description: 验证码
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: UserVOInfo
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: "#/definitions/UserVO"
+  /ar/getConfig:
+    get:
+      tags:
+        - 美识
+      description: 请求AR识别配置
+      operationId: getConfig
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: Config
+            properties:
+              model:
+                type: array
+                items:
+                  $ref: "#/definitions/ModelInfo"
+              video:
+                type: array
+                items:
+                  $ref: "#/definitions/VideoInfo"
+  /ar/getConfigNew:
+    get:
+      tags:
+        - 美识
+      description: 请求AR识别配置-新接口
+      operationId: getConfigNew
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: ConfigNew
+            properties:
+              model:
+                type: array
+                items:
+                  $ref: "#/definitions/ModelInfo"
+              video:
+                type: array
+                items:
+                  $ref: "#/definitions/VideoInfoNew"
+  /ar/getUpdatePicture:
+    get:
+      tags:
+        - 美识
+      description: 获取需要更新的图片
+      operationId: getUpdatePicture
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Md5PicturePath"
+  /ar/checkLimitTimes:
+    post:
+      tags:
+        - 美识
+      description: 检查限制次数，并保存经纬度信息
+      operationId: checkLimitTimes
+      parameters:
+        - name: imgMark
+          in: query
+          description: 图片标识
+          required: true
+          type: string
+        - name: userMark
+          in: query
+          description: 用户标识
+          required: true
+          type: string
+        - name: Lng
+          in: query
+          description: 经度
+          type: string
+        - name: lat
+          in: query
+          description: 纬度
+          type: string
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: LimitTimes
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: '#/definitions/LimitTimesData'
+  /ar/getQRcodeVideos:
+    get:
+      tags:
+        - 美识
+      description: 根据二维码的数据，返回视频
+      operationId: getQRcodeVideos
+      parameters:
+        - name: id
+          type: integer
+          in: query
+          required: true
+          description: 图片标识
+      responses:
+        200:
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/VideoInfoNew"
+  /ar/getQRcodeModel:
+    get:
+      tags:
+        - 美识
+      description: 根据二维码的数据，返回model
+      operationId: getQRcodeModel
+      parameters:
+        - name: id
+          type: integer
+          in: query
+          required: true
+          description: 图片标识
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/ModelInfo"
+  /my/works/list:
+    get:
+      tags:
+        - 我的
+      description: 我的作品
+      operationId: myWorksList
+      parameters:
+        - $ref: "#/parameters/tokenQuery"
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: worksVOList
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: '#/definitions/worksVO'
+  /my/works/add:
+    post:
+      tags:
+        - 我的
+      description: 提交我的作品
+      operationId: myWorksAdd
+      parameters:
+        - $ref: "#/parameters/tokenQuery"
+        - name: worksUrl
+          in: query
+          type: string
+          required: true
+          description: 作品的url
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  /my/works/del:
+    post:
+      tags:
+        - 我的
+      description: 删除我的作品
+      operationId: myWorksDel
+      parameters:
+        - $ref: "#/parameters/tokenQuery"
+        - name: worksidList
+          in: query
+          type: string
+          required: true
+          description: 多个逗号隔开
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  /my/info/modify:
+    post:
+      tags:
+        - 我的
+      description: 信息修改
+      operationId: infoModify
+      parameters:
+        - $ref: "#/parameters/tokenQuery"
+        - name: nickname
+          in: query
+          type: string
+          description: 昵称
+        - name: head
+          in: query
+          type: string
+          description: 头像
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+  /my/info/obtain:
+    get:
+      tags:
+        - 我的
+      description: 我的信息
+      operationId: infoObtain
+      parameters:
+        - $ref: "#/parameters/tokenQuery"
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: UserVOInfo
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: "#/definitions/UserVO"
+  /bananalab/article:
+    get:
+      tags:
+        - 官网
+      description: 文章推荐
+      operationId: article
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: articleVOList
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                type: array
+                items:
+                  $ref: "#/definitions/articleVO"
+  /bananalab/article/detail:
+    get:
+      tags:
+        - 官网
+      description: 文章详情
+      operationId: articleDetail
+      parameters:
+        - name: articleid
+          in: query
+          type: integer
+          required: true
+      responses:
+        200:
+          description: success
+          schema:
+            type: object
+            title: articleVOInfo
+            properties:
+              code:
+                type: integer
+              msg:
+                type: string
+              data:
+                $ref: "#/definitions/articleVO"
+  /bananalab/consult:
+    post:
+      tags:
+        - 官网
+      description: 咨询提交
+      operationId: consultAdd
+      parameters:
+        - name: name
+          in: query
+          type: string
+          required: true
+        - name: companyName
+          in: query
+          type: string
+          required: true
+        - name: phone
+          in: query
+          type: string
+          required: true
+        - name: workNeed
+          in: query
+          type: string
+      responses:
+        200:
+          description: success
+          schema:
+            $ref: "#/definitions/baseVO"
+definitions:
+  baseVO:
+    type: object
+    properties:
+      code:
+        type: integer
+      msg:
+        type: string
+      data:
+        type: string
+  UserVO:
+    type: object
+    properties:
+      id:
+        type: string
+      token:
+        type: string
+      img:
+        type: string
+        description: 图片
+      name:
+        type: string
+        description: 用户名
+      intro:
+        type: string
+        description: 简介
+  ModelInfo:
+    type: object
+    properties:
+      id:
+        type: integer
+      mapName:
+        type: string
+        description: 识别图名称
+      modelName:
+        type: string
+        description: 模型加载名称
+      name:
+        type: string
+        description: AR名称
+      luaName:
+        type: string
+        description: 脚本加载名称
+      limitTime:
+        type: integer
+        description: 限制次数
+      password:
+        type: string
+        description: 密码
+      modelZip:
+        type: string
+  VideoInfoNew:
+    type: object
+    properties:
+      picture:
+        type: object
+        properties:
+          id:
+            type: integer
+          mapName:
+            type: string
+            description: 识别图名称
+          name:
+            type: string
+            description: AR名称
+          isChroam:
+            type: boolean
+            description: 是否抠绿，true=扣，false=不扣
+          isJump:
+            type: boolean
+            description: 播放完成是否跳转，true=跳，false=不跳
+          jumpHttp:
+            type: string
+            description: 跳转网址
+          limitTime:
+            type: integer
+            description: 限制次数
+          password:
+            type: string
+            description: 密码
+      video:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            path:
+              type: string
+            width:
+              type: integer
+              description: 宽
+            height:
+              type: integer
+              description: 高
+  VideoInfo:
+    type: object
+    properties:
+      id:
+        type: integer
+      mapName:
+        type: string
+        description: 识别图名称
+      videoHttp:
+        type: string
+        description: 模型加载名称
+      name:
+        type: string
+        description: AR名称
+      isChroam:
+        type: boolean
+        description: 是否抠绿 true-扣 false-不扣
+      isJump:
+        type: boolean
+        description: 播放完成是否跳转 true-跳 false-不跳
+      jumpHttp:
+        type: string
+        description: 跳转网址
+      limitTime:
+        type: integer
+        description: 限制次数
+      password:
+        type: string
+        description: 密码
+  Md5PicturePath:
+    type: object
+    properties:
+      id:
+        type: integer
+      md5:
+        type: string
+      path:
+        type: string
+  LimitTimesData:
+    type: object
+    properties:
+      isAllow:
+        type: boolean
+        description: 是否允许扫描
+      surplusTime:
+        type: integer
+        description: 剩余扫描次数
+  fileUploadVO:
+    type: object
+    properties:
+      frontUrl:
+        type: string
+        description: 图片的前半部分地址
+      afterUrl:
+        type: string
+        description: 图片后半部分地址
+      fullUrl:
+        type: string
+        description: 图片全路径
+  worksVO:
+    type: object
+    properties:
+      id:
+        type: integer
+      video:
+        type: string
+  articleVO:
+    type: object
+    properties:
+      id:
+        type: integer
+      title:
+        type: string
+      author:
+        type: string
+      introduction:
+        type: string
+      img:
+        type: string
+      content:
+        type: string
+      createTime:
+        type: string
+  

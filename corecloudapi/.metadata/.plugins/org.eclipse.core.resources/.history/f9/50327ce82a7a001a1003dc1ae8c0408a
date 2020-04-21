@@ -1,0 +1,206 @@
+package com.bananalab.snow.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * MessageVO
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public class MessageVO   {
+  @JsonProperty("type")
+  private Integer type = null;
+
+  @JsonProperty("content")
+  private String content = null;
+
+  @JsonProperty("orderId")
+  private String orderId = null;
+
+  @JsonProperty("withdrawId")
+  private Integer withdrawId = null;
+
+  @JsonProperty("createTime")
+  private String createTime = null;
+
+  @JsonProperty("state")
+  private Integer state = null;
+
+  public MessageVO type(Integer type) {
+    this.type = type;
+    return this;
+  }
+
+  /**
+   * Get type
+   * @return type
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getType() {
+    return type;
+  }
+
+  public void setType(Integer type) {
+    this.type = type;
+  }
+
+  public MessageVO content(String content) {
+    this.content = content;
+    return this;
+  }
+
+  /**
+   * Get content
+   * @return content
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getContent() {
+    return content;
+  }
+
+  public void setContent(String content) {
+    this.content = content;
+  }
+
+  public MessageVO orderId(String orderId) {
+    this.orderId = orderId;
+    return this;
+  }
+
+  /**
+   * Get orderId
+   * @return orderId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getOrderId() {
+    return orderId;
+  }
+
+  public void setOrderId(String orderId) {
+    this.orderId = orderId;
+  }
+
+  public MessageVO withdrawId(Integer withdrawId) {
+    this.withdrawId = withdrawId;
+    return this;
+  }
+
+  /**
+   * Get withdrawId
+   * @return withdrawId
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getWithdrawId() {
+    return withdrawId;
+  }
+
+  public void setWithdrawId(Integer withdrawId) {
+    this.withdrawId = withdrawId;
+  }
+
+  public MessageVO createTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Get createTime
+   * @return createTime
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(String createTime) {
+    this.createTime = createTime;
+  }
+
+  public MessageVO state(Integer state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Get state
+   * @return state
+  **/
+  @ApiModelProperty(value = "")
+
+
+  public Integer getState() {
+    return state;
+  }
+
+  public void setState(Integer state) {
+    this.state = state;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    MessageVO messageVO = (MessageVO) o;
+    return Objects.equals(this.type, messageVO.type) &&
+        Objects.equals(this.content, messageVO.content) &&
+        Objects.equals(this.orderId, messageVO.orderId) &&
+        Objects.equals(this.withdrawId, messageVO.withdrawId) &&
+        Objects.equals(this.createTime, messageVO.createTime) &&
+        Objects.equals(this.state, messageVO.state);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(type, content, orderId, withdrawId, createTime, state);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class MessageVO {\n");
+    
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
+    sb.append("    withdrawId: ").append(toIndentedString(withdrawId)).append("\n");
+    sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+

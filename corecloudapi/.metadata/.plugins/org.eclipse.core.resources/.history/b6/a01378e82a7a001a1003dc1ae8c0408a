@@ -1,0 +1,30 @@
+package com.bananalab.snow.api;
+
+import com.bananalab.snow.api.model.BaseVO;
+import com.bananalab.snow.api.model.Login;
+import io.swagger.annotations.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * A delegate to be called by the {@link LoginApiController}}.
+ * Implement this interface with a {@link org.springframework.stereotype.Service} annotated class.
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-04-09T14:17:07.921+08:00")
+
+public interface LoginApiDelegate {
+
+    /**
+     * @see LoginApi#isuser
+     */
+    ResponseEntity<BaseVO> isuser( String  openId);
+
+    /**
+     * @see LoginApi#login
+     */
+    ResponseEntity<Login> login( String  openId);
+
+}
